@@ -46,9 +46,11 @@ function LandingPage() {
     const stage = stageRef.current;
     if (!stage || window.matchMedia("(prefers-reduced-motion: reduce)").matches || !window.matchMedia("(pointer: fine)").matches) return;
 
-    const items = Array.from(stage.querySelectorAll<HTMLElement>(".fragment"));
+    const items = Array.from(stage.querySelectorAll<HTMLElement>(".fragment")).map((el) => ({ el, zoom: 0 }));
     const target = { x: 0, y: 0 };
     const current = { x: 0, y: 0 };
+    let pointerX = -Infinity;
+    let pointerY = -Infinity;
     let frame = 0;
 
     const animate = () => {
@@ -56,19 +58,31 @@ function LandingPage() {
       current.y += (target.y - current.y) * 0.09;
 
       items.forEach((item) => {
-        const depth = Number(item.dataset["depth"] ?? 1);
-        item.style.setProperty("--mouse-x", `${current.x * depth * 34}px`);
-        item.style.setProperty("--mouse-y", `${current.y * depth * 25}px`);
+        const depth = Number(item.el.dataset["depth"] ?? 1);
+        item.el.style.setProperty("--mouse-x", `${current.x * depth * 34}px`);
+        item.el.style.setProperty("--mouse-y", `${current.y * depth * 25}px`);
+
+        // Proximity zoom: the closer the cursor, the bigger the image.
+        const rect = item.el.getBoundingClientRect();
+        const dist = Math.hypot(pointerX - (rect.left + rect.width / 2), pointerY - (rect.top + rect.height / 2));
+        const reach = Math.max(rect.width, rect.height) * 1.6;
+        const targetZoom = pointerX === -Infinity ? 0 : Math.max(0, Math.min(1, 1 - dist / reach));
+        item.zoom += (targetZoom - item.zoom) * 0.12;
+        item.el.style.setProperty("--zoom", `${1 + item.zoom * 0.22}`);
       });
 
       frame = window.requestAnimationFrame(animate);
     };
 
     const handlePointerMove = (event: PointerEvent) => {
+      pointerX = event.clientX;
+      pointerY = event.clientY;
       target.x = event.clientX / window.innerWidth - 0.5;
       target.y = event.clientY / window.innerHeight - 0.5;
     };
     const handlePointerLeave = () => {
+      pointerX = -Infinity;
+      pointerY = -Infinity;
       target.x = 0;
       target.y = 0;
     };
