@@ -56,7 +56,7 @@ function LandingPage() {
       current.y += (target.y - current.y) * 0.09;
 
       items.forEach((item) => {
-        const depth = Number(item.dataset.depth ?? 1);
+        const depth = Number(item.dataset["depth"] ?? 1);
         item.style.setProperty("--mouse-x", `${current.x * depth * 34}px`);
         item.style.setProperty("--mouse-y", `${current.y * depth * 25}px`);
       });
