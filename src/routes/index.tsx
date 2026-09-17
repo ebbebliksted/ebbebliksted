@@ -75,10 +75,14 @@ function LandingPage() {
     };
 
     const handlePointerMove = (event: PointerEvent) => {
+      pointerX = event.clientX;
+      pointerY = event.clientY;
       target.x = event.clientX / window.innerWidth - 0.5;
       target.y = event.clientY / window.innerHeight - 0.5;
     };
     const handlePointerLeave = () => {
+      pointerX = -Infinity;
+      pointerY = -Infinity;
       target.x = 0;
       target.y = 0;
     };
