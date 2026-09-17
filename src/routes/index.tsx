@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect, useRef, type CSSProperties } from "react";
 
 import bigSun from "@/assets/BigSun.png.asset.json";
 import books from "@/assets/Bogreolen.png.asset.json";
@@ -26,24 +27,73 @@ export const Route = createFileRoute("/")({
 });
 
 const fragments = [
-  { src: bigSun.url, alt: "Interactive strength test at an outdoor event", className: "fragment fragment-sun" },
-  { src: books.url, alt: "Book recommendation interface", className: "fragment fragment-books" },
-  { src: designPark.url, alt: "Modular product display in an open container", className: "fragment fragment-park" },
-  { src: fitphone.url, alt: "Technical drawing of a handheld product", className: "fragment fragment-fitphone" },
-  { src: flexmover.url, alt: "Flexmover industrial transport concept", className: "fragment fragment-flex" },
-  { src: playbook.url, alt: "Mission Lab playbook cover", className: "fragment fragment-playbook" },
-  { src: openBox.url, alt: "Electronics prototype in an open enclosure", className: "fragment fragment-box" },
-  { src: orion.url, alt: "Orion character model", className: "fragment fragment-orion" },
-  { src: packing.url, alt: "Packaging simulation result", className: "fragment fragment-packing" },
-  { src: picture.url, alt: "Mobile interface prototype tested outdoors", className: "fragment fragment-phone" },
+  { src: bigSun.url, alt: "Interactive strength test at an outdoor event", className: "fragment fragment-sun", depth: 1 },
+  { src: books.url, alt: "Book recommendation interface", className: "fragment fragment-books", depth: -0.7 },
+  { src: designPark.url, alt: "Modular product display in an open container", className: "fragment fragment-park", depth: 0.8 },
+  { src: fitphone.url, alt: "Technical drawing of a handheld product", className: "fragment fragment-fitphone", depth: -1.15 },
+  { src: flexmover.url, alt: "Flexmover industrial transport concept", className: "fragment fragment-flex", depth: 0.65 },
+  { src: playbook.url, alt: "Mission Lab playbook cover", className: "fragment fragment-playbook", depth: -0.85 },
+  { src: openBox.url, alt: "Electronics prototype in an open enclosure", className: "fragment fragment-box", depth: 1.1 },
+  { src: orion.url, alt: "Orion character model", className: "fragment fragment-orion", depth: -1 },
+  { src: packing.url, alt: "Packaging simulation result", className: "fragment fragment-packing", depth: 0.9 },
+  { src: picture.url, alt: "Mobile interface prototype tested outdoors", className: "fragment fragment-phone", depth: -0.6 },
 ];
 
 function LandingPage() {
+  const stageRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const stage = stageRef.current;
+    if (!stage || window.matchMedia("(prefers-reduced-motion: reduce)").matches || !window.matchMedia("(pointer: fine)").matches) return;
+
+    const items = Array.from(stage.querySelectorAll<HTMLElement>(".fragment"));
+    const target = { x: 0, y: 0 };
+    const current = { x: 0, y: 0 };
+    let frame = 0;
+
+    const animate = () => {
+      current.x += (target.x - current.x) * 0.09;
+      current.y += (target.y - current.y) * 0.09;
+
+      items.forEach((item) => {
+        const depth = Number(item.dataset.depth ?? 1);
+        item.style.setProperty("--mouse-x", `${current.x * depth * 34}px`);
+        item.style.setProperty("--mouse-y", `${current.y * depth * 25}px`);
+      });
+
+      frame = window.requestAnimationFrame(animate);
+    };
+
+    const handlePointerMove = (event: PointerEvent) => {
+      target.x = event.clientX / window.innerWidth - 0.5;
+      target.y = event.clientY / window.innerHeight - 0.5;
+    };
+    const handlePointerLeave = () => {
+      target.x = 0;
+      target.y = 0;
+    };
+
+    stage.addEventListener("pointermove", handlePointerMove);
+    stage.addEventListener("pointerleave", handlePointerLeave);
+    frame = window.requestAnimationFrame(animate);
+
+    return () => {
+      stage.removeEventListener("pointermove", handlePointerMove);
+      stage.removeEventListener("pointerleave", handlePointerLeave);
+      window.cancelAnimationFrame(frame);
+    };
+  }, []);
+
   return (
-    <main className="landing-stage">
+    <main ref={stageRef} className="landing-stage">
       <div className="collage" aria-hidden="true">
         {fragments.map((fragment, index) => (
-          <figure className={fragment.className} key={fragment.src} style={{ "--delay": `${index * 0.12}s` } as React.CSSProperties}>
+          <figure
+            className={fragment.className}
+            data-depth={fragment.depth}
+            key={fragment.src}
+            style={{ "--delay": `${index * 0.1}s` } as CSSProperties}
+          >
             <img src={fragment.src} alt="" draggable={false} />
           </figure>
         ))}
