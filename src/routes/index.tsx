@@ -46,19 +46,28 @@ function LandingPage() {
     const stage = stageRef.current;
     if (!stage || window.matchMedia("(prefers-reduced-motion: reduce)").matches || !window.matchMedia("(pointer: fine)").matches) return;
 
-    const items = Array.from(stage.querySelectorAll<HTMLElement>(".fragment"));
+    const items = Array.from(stage.querySelectorAll<HTMLElement>(".fragment")).map((el) => ({ el, zoom: 0 }));
     const target = { x: 0, y: 0 };
     const current = { x: 0, y: 0 };
+    let pointerX = -Infinity;
+    let pointerY = -Infinity;
     let frame = 0;
 
     const animate = () => {
       current.x += (target.x - current.x) * 0.09;
       current.y += (target.y - current.y) * 0.09;
 
-      items.forEach((item) => {
-        const depth = Number(item.dataset["depth"] ?? 1);
-        item.style.setProperty("--mouse-x", `${current.x * depth * 34}px`);
-        item.style.setProperty("--mouse-y", `${current.y * depth * 25}px`);
+      items.forEach(({ el, zoom }) => {
+        const depth = Number(el.dataset["depth"] ?? 1);
+        el.style.setProperty("--mouse-x", `${current.x * depth * 34}px`);
+        el.style.setProperty("--mouse-y", `${current.y * depth * 25}px`);
+
+        // Proximity zoom: the closer the cursor, the bigger the image.
+        const rect = el.getBoundingClientRect();
+        const dist = Math.hypot(pointerX - (rect.left + rect.width / 2), pointerY - (rect.top + rect.height / 2));
+        const reach = Math.max(rect.width, rect.height) * 1.6;
+        const targetZoom = pointerX === -Infinity ? 0 : Math.max(0, Math.min(1, 1 - dist / reach));
+        el.style.setProperty("--zoom", `${1 + (zoom + (targetZoom - zoom) * 0.12) * 0.22}`);
       });
 
       frame = window.requestAnimationFrame(animate);
