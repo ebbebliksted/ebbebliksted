@@ -281,6 +281,7 @@
   .about-intro { padding: 5vh 0 12vh; }
   .about-intro h1 { margin-top: 2rem; }
   .about-lead, .about-contact { grid-column: 1; }
+  .about-portrait { grid-column: 1; grid-row: auto; margin: 2.5rem 0 0; order: 3; max-width: 14rem; }
   .about-section-label { margin-bottom: 3rem; }
   .experience-item { grid-template-columns: 1fr; gap: 1rem; }
   .education-grid { grid-template-columns: 1fr; }
