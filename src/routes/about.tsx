@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import portraitAsset from "@/assets/profilbillede.jpg.asset.json";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -60,6 +61,9 @@ function AboutPage() {
 
       <section className="about-intro" aria-labelledby="about-heading">
         <p className="about-kicker">About · Copenhagen</p>
+        <figure className="about-portrait">
+          <img src={portraitAsset.url} alt="Portrait of Ebbe Bliksted" width={800} height={1000} />
+        </figure>
         <h1 id="about-heading">I design products, systems and collaborations for complex challenges.</h1>
         <p className="about-lead">I’m a newly graduated design engineer from DTU with a strong methodological toolkit spanning design thinking, product development and qualitative research. Through more than two years at the think tank ATV, I have facilitated cross-disciplinary innovation across public authorities, universities and companies.</p>
         <div className="about-contact">
