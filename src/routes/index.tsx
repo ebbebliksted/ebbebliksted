@@ -134,7 +134,7 @@ function LandingPage() {
 
       <Link to="/about" onClick={enterPortfolio} className="identity group" aria-label="Enter Ebbe Bliksted's portfolio">
         <h1>Ebbe Bliksted</h1>
-        <p>Cand.poly Design &amp; Innovation</p>
+        <p>CAND.POLYT DESIGN &amp; INNOVATION</p>
         <span className="enter-label" aria-hidden="true">Enter portfolio <span>↗</span></span>
       </Link>
 
