@@ -1,5 +1,5 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect, useRef, type CSSProperties } from "react";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { useEffect, useRef, useState, type CSSProperties, type MouseEvent } from "react";
 
 import bigSun from "@/assets/BigSun.png.asset.json";
 import books from "@/assets/Bogreolen.png.asset.json";
@@ -27,20 +27,22 @@ export const Route = createFileRoute("/")({
 });
 
 const fragments = [
-  { src: bigSun.url, alt: "Interactive strength test at an outdoor event", className: "fragment fragment-sun", depth: 1 },
-  { src: books.url, alt: "Book recommendation interface", className: "fragment fragment-books", depth: -0.7 },
-  { src: designPark.url, alt: "Modular product display in an open container", className: "fragment fragment-park", depth: 0.8 },
-  { src: fitphone.url, alt: "Technical drawing of a handheld product", className: "fragment fragment-fitphone", depth: -1.15 },
-  { src: flexmover.url, alt: "Flexmover industrial transport concept", className: "fragment fragment-flex", depth: 0.65 },
-  { src: playbook.url, alt: "Mission Lab playbook cover", className: "fragment fragment-playbook", depth: -0.85 },
-  { src: openBox.url, alt: "Electronics prototype in an open enclosure", className: "fragment fragment-box", depth: 1.1 },
-  { src: orion.url, alt: "Orion character model", className: "fragment fragment-orion", depth: -1 },
-  { src: packing.url, alt: "Packaging simulation result", className: "fragment fragment-packing", depth: 0.9 },
-  { src: picture.url, alt: "Mobile interface prototype tested outdoors", className: "fragment fragment-phone", depth: -0.6 },
+  { src: bigSun.url, alt: "Interactive strength test at an outdoor event", className: "fragment fragment-sun", depth: 1, exit: "-75vw, -65vh" },
+  { src: books.url, alt: "Book recommendation interface", className: "fragment fragment-books", depth: -0.7, exit: "-80vw, 70vh" },
+  { src: designPark.url, alt: "Modular product display in an open container", className: "fragment fragment-park", depth: 0.8, exit: "75vw, -70vh" },
+  { src: fitphone.url, alt: "Technical drawing of a handheld product", className: "fragment fragment-fitphone", depth: -1.15, exit: "-75vw, 5vh" },
+  { src: flexmover.url, alt: "Flexmover industrial transport concept", className: "fragment fragment-flex", depth: 0.65, exit: "80vw, 70vh" },
+  { src: playbook.url, alt: "Mission Lab playbook cover", className: "fragment fragment-playbook", depth: -0.85, exit: "5vw, -85vh" },
+  { src: openBox.url, alt: "Electronics prototype in an open enclosure", className: "fragment fragment-box", depth: 1.1, exit: "-10vw, 90vh" },
+  { src: orion.url, alt: "Orion character model", className: "fragment fragment-orion", depth: -1, exit: "85vw, -5vh" },
+  { src: packing.url, alt: "Packaging simulation result", className: "fragment fragment-packing", depth: 0.9, exit: "75vw, 55vh" },
+  { src: picture.url, alt: "Mobile interface prototype tested outdoors", className: "fragment fragment-phone", depth: -0.6, exit: "-55vw, 80vh" },
 ];
 
 function LandingPage() {
   const stageRef = useRef<HTMLElement>(null);
+  const [isExiting, setIsExiting] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const stage = stageRef.current;
@@ -98,22 +100,39 @@ function LandingPage() {
     };
   }, []);
 
+  const enterPortfolio = (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    if (isExiting) return;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      void navigate({ to: "/about" });
+      return;
+    }
+
+    setIsExiting(true);
+    window.setTimeout(() => void navigate({ to: "/about" }), 950);
+  };
+
   return (
-    <main ref={stageRef} className="landing-stage">
+    <main ref={stageRef} className={`landing-stage${isExiting ? " is-exiting" : ""}`}>
       <div className="collage" aria-hidden="true">
         {fragments.map((fragment, index) => (
           <figure
             className={fragment.className}
             data-depth={fragment.depth}
             key={fragment.src}
-            style={{ "--delay": `${index * 0.1}s` } as CSSProperties}
+            style={{
+              "--delay": `${index * 0.1}s`,
+              "--exit-x": fragment.exit.split(", ")[0],
+              "--exit-y": fragment.exit.split(", ")[1],
+            } as CSSProperties}
           >
             <img src={fragment.src} alt="" draggable={false} />
           </figure>
         ))}
       </div>
 
-      <Link to="/work" className="identity group" aria-label="Enter Ebbe Bliksted's portfolio">
+      <Link to="/about" onClick={enterPortfolio} className="identity group" aria-label="Enter Ebbe Bliksted's portfolio">
         <h1>Ebbe Bliksted</h1>
         <p>Cand.poly Design &amp; Innovation</p>
         <span className="enter-label" aria-hidden="true">Enter portfolio <span>↗</span></span>
