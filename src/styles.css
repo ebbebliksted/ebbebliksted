@@ -229,6 +229,9 @@
 .about-header nav a, .about-contact a { color: var(--foreground); font-size: .67rem; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: .2rem; }
 .about-intro { display: grid; grid-template-columns: minmax(8rem, 1fr) minmax(0, 5.5fr); column-gap: clamp(2rem, 6vw, 7rem); padding: 7vh 0 16vh; }
 .about-kicker { margin: .6rem 0 0; font-size: .62rem; text-transform: uppercase; color: var(--muted-foreground); }
+.about-portrait { grid-column: 1; grid-row: 2 / span 2; align-self: start; margin: clamp(3rem, 8vh, 6rem) 0 0; }
+.about-portrait img { display: block; width: 100%; max-width: 17rem; aspect-ratio: 4 / 5; object-fit: cover; filter: grayscale(1) contrast(1.05); }
+.about-portrait figcaption, .about-portrait::after { content: none; }
 .about-intro h1 { max-width: 13ch; margin: 0; font-family: var(--font-serif); font-size: clamp(3.4rem, 7vw, 7.5rem); font-weight: 400; line-height: .94; }
 .about-lead { grid-column: 2; max-width: 55rem; margin: clamp(3rem, 8vh, 6rem) 0 0; font-size: clamp(1.1rem, 1.7vw, 1.6rem); line-height: 1.6; }
 .about-contact { grid-column: 2; display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 2.25rem; }
