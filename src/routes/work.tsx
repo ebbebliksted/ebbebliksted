@@ -36,12 +36,14 @@ const projects = [
   {
     image: workImage3,
     title: "Project Three",
+    slug: "project-three",
     year: "2024",
     text: "Esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.",
   },
   {
     image: workImage4,
     title: "Project Four",
+    slug: "project-four",
     year: "2023",
     text: "Id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
   },
