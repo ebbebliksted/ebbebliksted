@@ -139,13 +139,6 @@ function ProjectPage() {
         </div>
       </section>
 
-      <section className="about-section" aria-labelledby="project-skills-heading">
-        <div className="about-section-label"><span>03</span><h2 id="project-skills-heading">Skills</h2></div>
-        <div className="about-capabilities project-skills">
-          <ul>{project.skills.map((skill) => <li key={skill}>{skill}</li>)}</ul>
-        </div>
-      </section>
-
       <footer className="about-footer">
         <p>Next project</p>
         <Link to="/work/$projectId" params={{ projectId: nextId }}>{projects[nextId]!.title} <span aria-hidden="true">↗</span></Link>
