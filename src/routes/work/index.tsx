@@ -4,7 +4,7 @@ import workImage2 from "@/assets/work-placeholder-2.png";
 import workImage3 from "@/assets/work-placeholder-3.png";
 import workImage4 from "@/assets/work-placeholder-4.png";
 
-export const Route = createFileRoute("/work")({
+export const Route = createFileRoute("/work/")({
   head: () => ({
     meta: [
       { title: "Selected Work — Ebbe Bliksted" },
