@@ -29,6 +29,7 @@ const projects = [
   {
     image: workImage2,
     title: "Project Two",
+    slug: "project-two",
     year: "2025",
     text: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.",
   },

@@ -100,7 +100,7 @@ function ProjectPage() {
   const project = projects[projectId]!;
   const projectIds = Object.keys(projects);
   const index = projectIds.indexOf(projectId);
-  const nextId = projectIds[(index + 1) % projectIds.length];
+  const nextId = projectIds[(index + 1) % projectIds.length]!;
 
   return (
     <main className="about-page project-page">
