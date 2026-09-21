@@ -78,7 +78,7 @@ function WorkPage() {
               <p className="work-index">{String(index + 1).padStart(2, "0")} · {project.year}</p>
               <h2>{project.title}</h2>
               <p>{project.text}</p>
-              <a href="#" className="work-read-more" aria-label={`Read more about ${project.title}`}>Read more <span aria-hidden="true">↗</span></a>
+              <Link to="/work/$projectId" params={{ projectId: project.slug }} className="work-read-more" aria-label={`Read more about ${project.title}`}>Read more <span aria-hidden="true">↗</span></Link>
             </div>
           </article>
         ))}
