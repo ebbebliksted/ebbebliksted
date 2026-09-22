@@ -1,7 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import urbanBloomImage from "@/assets/urban-bloom-phone.jpg.asset.json";
 import thesisCoverImage from "@/assets/speciale-forside.jpg.asset.json";
-import workImage3 from "@/assets/work-placeholder-3.png";
+import designParkHero from "@/assets/design-park-hero.png";
 import workImage4 from "@/assets/work-placeholder-4.png";
 
 const projects: Record<string, {
@@ -42,20 +42,20 @@ const projects: Record<string, {
     ],
     skills: ["Life Cycle Assessment", "Sustainability strategy", "Design Research Methodology", "Stakeholder interviews", "Industrial collaboration"],
   },
-  "project-three": {
-    title: "Project Three",
+  "design-park": {
+    title: "DesignPark",
     year: "2024",
-    image: workImage3,
+    image: designParkHero,
     description: [
-      "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.",
-      "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+      "DesignPark asks how primary schools without a makerspace of their own could get hands-on access to digital fabrication. Using the N-model, the project moved between the engineering, complex-system and artefact levels — combining desk research, 17 stakeholder interviews and co-creation workshops at two schools to understand why donated 3D printers and laser cutters so often sit unused: schools have the equipment, but not the maintenance know-how, curriculum or time.",
+      "The result is a 20-foot container fitted out as a mobile makerspace, paired with a product-service system: schools book a visit, a facilitator and ready-made STEM curriculum through a website, while DesignPark keeps ownership of — and responsibility for — the machines. The concept was tested through a real co-creation workshop at a primary school, a website prototype, a business model canvas, and a cost and market analysis.",
     ],
     learnings: [
-      "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.",
-      "Omnis voluptas assumenda est, omnis dolor repellendus temporibus autem quibusdam.",
-      "Et harum quidem rerum facilis est et expedita distinctio nam libero tempore.",
+      "A good artefact isn't enough — the real barrier between schools and digital fabrication was organisational (maintenance, curriculum, teacher confidence), not physical space or budget.",
+      "Letting teachers co-design without also holding a clear point of view produces a compromise, not a good makerspace — one interviewee's line, 'if teachers get to design the makerspace, it will be a bad makerspace,' stuck with the team.",
+      "With eight people and 17 interviews, structured project management mattered as much as the design work — momentum only picked up once roles and delegation were made explicit.",
     ],
-    skills: ["LCA & ESG reporting", "Product development", "Figma", "Workshop facilitation"],
+    skills: ["Systems-level design (N-model)", "Stakeholder research & interviews", "Co-creation workshops", "Product-service system design", "CAD & prototyping", "Business modelling"],
   },
   "project-four": {
     title: "Project Four",

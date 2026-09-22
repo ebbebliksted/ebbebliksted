@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import urbanBloomImage from "@/assets/urban-bloom-phone.jpg.asset.json";
 import thesisCoverImage from "@/assets/speciale-forside.jpg.asset.json";
-import workImage3 from "@/assets/work-placeholder-3.png";
+import designParkHero from "@/assets/design-park-hero.png";
 import workImage4 from "@/assets/work-placeholder-4.png";
 
 export const Route = createFileRoute("/work/")({
@@ -34,11 +34,11 @@ const projects = [
     text: "A master's thesis investigating the environmental footprint of metal 3D-printed tooling for injection moulding, in collaboration with an industrial manufacturing partner.",
   },
   {
-    image: workImage3,
-    title: "Project Three",
-    slug: "project-three",
+    image: designParkHero,
+    title: "DesignPark",
+    slug: "design-park",
     year: "2024",
-    text: "Esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.",
+    text: "A holistic systems-design project imagining DesignPark: a mobile makerspace in a shipping container that brings digital fabrication tools directly to primary schools, paired with a booking platform and ready-made curriculum.",
   },
   {
     image: workImage4,
