@@ -3,6 +3,7 @@ import urbanBloomImage from "@/assets/urban-bloom-phone.jpg.asset.json";
 import thesisCoverImage from "@/assets/speciale-forside.jpg.asset.json";
 import designParkHero from "@/assets/design-park-hero.png";
 import legoClubHero from "@/assets/lego-club-5083.jpg";
+import missionLabCover from "@/assets/mission-lab-playbook-cover.png";
 
 export const Route = createFileRoute("/work/")({
   head: () => ({
@@ -46,6 +47,13 @@ const projects = [
     slug: "the-club",
     year: "2022",
     text: "During an internship on LEGO's element design team, I designed Orion's club — element 5083 — for Collectible Minifigures Series 26, taking it from concept sculpt through to a manufacturable, mould-ready part.",
+  },
+  {
+    image: missionLabCover,
+    title: "Mission Lab Playbook",
+    slug: "mission-lab-playbook",
+    year: "2025",
+    text: "A working document for ATV — the Danish Academy of Technical Sciences — on mission-oriented innovation, condensing input from experts across user involvement, futures studies, design and climate IT into a playbook that's quick to read and put into practice.",
   },
 ];
 

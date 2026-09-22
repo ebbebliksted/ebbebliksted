@@ -3,6 +3,7 @@ import urbanBloomImage from "@/assets/urban-bloom-phone.jpg.asset.json";
 import thesisCoverImage from "@/assets/speciale-forside.jpg.asset.json";
 import designParkHero from "@/assets/design-park-hero.png";
 import legoClubHero from "@/assets/lego-club-5083.jpg";
+import missionLabCover from "@/assets/mission-lab-playbook-cover.png";
 
 const projects: Record<string, {
   title: string;
@@ -71,6 +72,21 @@ const projects: Record<string, {
       "Getting an element from concept to production is a team sport — creative intent only survives contact with moulding, safety and cost constraints through close collaboration with element leads and engineers.",
     ],
     skills: ["3D sculpting (ZBrush)", "CAD modelling (Rhino)", "Design for manufacturing (DFM)", "Element/toy design", "Cross-functional collaboration"],
+  },
+  "mission-lab-playbook": {
+    title: "Mission Lab Playbook",
+    year: "2025",
+    image: missionLabCover,
+    description: [
+      "The Mission Lab Playbook is a working document that describes how ATV — the Danish Academy of Technical Sciences — works with mission-oriented innovation. It was made in collaboration with experts across a range of fields, including user involvement, futures studies, design and climate IT.",
+      "My role was to condense that large body of expert knowledge into a format that's simple to understand and quick to read for people who want to work more mission-oriented when developing technology.",
+    ],
+    learnings: [
+      "Distilling expert knowledge for practitioners is its own design problem — the hard part isn't gathering the input, it's deciding what to cut so the format stays quick to read without losing what makes it useful.",
+      "Working across fields as different as futures studies, design and climate IT meant finding a shared vocabulary and structure that felt native to none of them and useful to all of them.",
+      "A playbook only works if people actually pick it up — designing for scannability and quick reference mattered as much as getting the content right.",
+    ],
+    skills: ["Editorial & information design", "Content strategy", "Stakeholder collaboration", "Mission-oriented innovation", "Facilitation"],
   },
 };
 
