@@ -21,18 +21,18 @@ export const Route = createFileRoute("/work/")({
 
 const projects = [
   {
-    image: urbanBloomImage.url,
-    title: "Urban Bloom",
-    slug: "urban-bloom",
-    year: "2023",
-    text: "A bachelor thesis exploring how design can turn neglected urban plots into biodiversity. Urban Bloom is a mobile platform that lets citizens claim and green disused spaces, in collaboration with Copenhagen Municipality.",
-  },
-  {
     image: thesisCoverImage,
     title: "Sustainable Metal Additive Manufacturing",
     slug: "metal-additive-manufacturing",
     year: "2026",
     text: "A master's thesis investigating the environmental footprint of metal 3D-printed tooling for injection moulding, in collaboration with an industrial manufacturing partner.",
+  },
+  {
+    image: missionLabCover,
+    title: "Mission Lab Playbook",
+    slug: "mission-lab-playbook",
+    year: "2025",
+    text: "A working document for ATV — the Danish Academy of Technical Sciences — on mission-oriented innovation, condensing input from experts across user involvement, futures studies, design and climate IT into a playbook that's quick to read and put into practice.",
   },
   {
     image: designParkHero,
@@ -42,18 +42,18 @@ const projects = [
     text: "A holistic systems-design project imagining DesignPark: a mobile makerspace in a shipping container that brings digital fabrication tools directly to primary schools, paired with a booking platform and ready-made curriculum.",
   },
   {
+    image: urbanBloomImage.url,
+    title: "Urban Bloom",
+    slug: "urban-bloom",
+    year: "2023",
+    text: "A bachelor thesis exploring how design can turn neglected urban plots into biodiversity. Urban Bloom is a mobile platform that lets citizens claim and green disused spaces, in collaboration with Copenhagen Municipality.",
+  },
+  {
     image: legoClubHero,
     title: "LEGO Element 5083 — The Club",
     slug: "the-club",
     year: "2022",
     text: "During an internship on LEGO's element design team, I designed Orion's club — element 5083 — for Collectible Minifigures Series 26, taking it from concept sculpt through to a manufacturable, mould-ready part.",
-  },
-  {
-    image: missionLabCover,
-    title: "Mission Lab Playbook",
-    slug: "mission-lab-playbook",
-    year: "2025",
-    text: "A working document for ATV — the Danish Academy of Technical Sciences — on mission-oriented innovation, condensing input from experts across user involvement, futures studies, design and climate IT into a playbook that's quick to read and put into practice.",
   },
 ];
 

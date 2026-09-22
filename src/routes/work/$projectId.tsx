@@ -13,21 +13,6 @@ const projects: Record<string, {
   learnings: string[];
   skills: string[];
 }> = {
-  "urban-bloom": {
-    title: "Urban Bloom",
-    year: "2023",
-    image: urbanBloomImage.url,
-    description: [
-      "Urban Bloom asks how design can strengthen the bond between city dwellers and the ecosystems around them. Using the Social Implication Design method, the project researched urban ecology, behavioural psychology and municipal systems to understand what stops Copenhageners from engaging with biodiversity close to home.",
-      "The result is a mobile platform that gives citizens the legal right and practical means to turn neglected pavement, curb strips and traffic islands into small, biodiversity-friendly plantings — developed in dialogue with Copenhagen Municipality and validated through expert interviews and a narrative-based study.",
-    ],
-    learnings: [
-      "Designing for behaviour change means designing the surrounding system — permissions, seed access and municipal process — not just the app.",
-      "Grounding the concept in stakeholder interviews and literature before ideating kept the platform's rules realistic rather than aspirational.",
-      "A concept this civic needs iteration: validation surfaced real feedback the current prototype doesn't yet fully address.",
-    ],
-    skills: ["Social Implication Design", "Stakeholder research", "Service design", "UX/UI prototyping", "Workshop facilitation"],
-  },
   "metal-additive-manufacturing": {
     title: "Sustainable Metal Additive Manufacturing",
     year: "2026",
@@ -42,6 +27,21 @@ const projects: Record<string, {
       "Environmental improvements can trade off against each other — reducing one impact category sometimes increases another.",
     ],
     skills: ["Life Cycle Assessment", "Sustainability strategy", "Design Research Methodology", "Stakeholder interviews", "Industrial collaboration"],
+  },
+  "mission-lab-playbook": {
+    title: "Mission Lab Playbook",
+    year: "2025",
+    image: missionLabCover,
+    description: [
+      "The Mission Lab Playbook is a working document that describes how ATV — the Danish Academy of Technical Sciences — works with mission-oriented innovation. It was made in collaboration with experts across a range of fields, including user involvement, futures studies, design and climate IT.",
+      "My role was to condense that large body of expert knowledge into a format that's simple to understand and quick to read for people who want to work more mission-oriented when developing technology.",
+    ],
+    learnings: [
+      "Distilling expert knowledge for practitioners is its own design problem — the hard part isn't gathering the input, it's deciding what to cut so the format stays quick to read without losing what makes it useful.",
+      "Working across fields as different as futures studies, design and climate IT meant finding a shared vocabulary and structure that felt native to none of them and useful to all of them.",
+      "A playbook only works if people actually pick it up — designing for scannability and quick reference mattered as much as getting the content right.",
+    ],
+    skills: ["Editorial & information design", "Content strategy", "Stakeholder collaboration", "Mission-oriented innovation", "Facilitation"],
   },
   "design-park": {
     title: "DesignPark",
@@ -58,6 +58,21 @@ const projects: Record<string, {
     ],
     skills: ["Systems-level design (N-model)", "Stakeholder research & interviews", "Co-creation workshops", "Product-service system design", "CAD & prototyping", "Business modelling"],
   },
+  "urban-bloom": {
+    title: "Urban Bloom",
+    year: "2023",
+    image: urbanBloomImage.url,
+    description: [
+      "Urban Bloom asks how design can strengthen the bond between city dwellers and the ecosystems around them. Using the Social Implication Design method, the project researched urban ecology, behavioural psychology and municipal systems to understand what stops Copenhageners from engaging with biodiversity close to home.",
+      "The result is a mobile platform that gives citizens the legal right and practical means to turn neglected pavement, curb strips and traffic islands into small, biodiversity-friendly plantings — developed in dialogue with Copenhagen Municipality and validated through expert interviews and a narrative-based study.",
+    ],
+    learnings: [
+      "Designing for behaviour change means designing the surrounding system — permissions, seed access and municipal process — not just the app.",
+      "Grounding the concept in stakeholder interviews and literature before ideating kept the platform's rules realistic rather than aspirational.",
+      "A concept this civic needs iteration: validation surfaced real feedback the current prototype doesn't yet fully address.",
+    ],
+    skills: ["Social Implication Design", "Stakeholder research", "Service design", "UX/UI prototyping", "Workshop facilitation"],
+  },
   "the-club": {
     title: "LEGO Element 5083 — The Club",
     year: "2022",
@@ -72,21 +87,6 @@ const projects: Record<string, {
       "Getting an element from concept to production is a team sport — creative intent only survives contact with moulding, safety and cost constraints through close collaboration with element leads and engineers.",
     ],
     skills: ["3D sculpting (ZBrush)", "CAD modelling (Rhino)", "Design for manufacturing (DFM)", "Element/toy design", "Cross-functional collaboration"],
-  },
-  "mission-lab-playbook": {
-    title: "Mission Lab Playbook",
-    year: "2025",
-    image: missionLabCover,
-    description: [
-      "The Mission Lab Playbook is a working document that describes how ATV — the Danish Academy of Technical Sciences — works with mission-oriented innovation. It was made in collaboration with experts across a range of fields, including user involvement, futures studies, design and climate IT.",
-      "My role was to condense that large body of expert knowledge into a format that's simple to understand and quick to read for people who want to work more mission-oriented when developing technology.",
-    ],
-    learnings: [
-      "Distilling expert knowledge for practitioners is its own design problem — the hard part isn't gathering the input, it's deciding what to cut so the format stays quick to read without losing what makes it useful.",
-      "Working across fields as different as futures studies, design and climate IT meant finding a shared vocabulary and structure that felt native to none of them and useful to all of them.",
-      "A playbook only works if people actually pick it up — designing for scannability and quick reference mattered as much as getting the content right.",
-    ],
-    skills: ["Editorial & information design", "Content strategy", "Stakeholder collaboration", "Mission-oriented innovation", "Facilitation"],
   },
 };
 
