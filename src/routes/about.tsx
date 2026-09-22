@@ -1,5 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import portraitAsset from "@/assets/profilbillede.jpg.asset.json";
+import atvLogo from "@/assets/logos/atv.svg";
+import dtuLogo from "@/assets/logos/dtu.svg";
+import legoLogo from "@/assets/logos/lego.svg";
+import ready2loopLogo from "@/assets/logos/ready2loop.svg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -20,24 +24,28 @@ const experience = [
     years: "2024—2026",
     role: "Student Assistant",
     place: "ATV — Danish Academy of Technical Sciences",
+    logo: atvLogo,
     text: "Developed and facilitated cross-disciplinary Mission Labs connecting universities, companies and public authorities. Translated qualitative and quantitative insights into analyses, reports, recommendations and decision material.",
   },
   {
     years: "2023",
     role: "Teaching Assistant",
     place: "Technical University of Denmark",
+    logo: dtuLogo,
     text: "Supported students in the course Design Thinking & Sociotechnical Systems and guided sociotechnical design projects.",
   },
   {
     years: "2022",
     role: "Element Designer",
     place: "The LEGO Group",
+    logo: legoLogo,
     text: "Developed new LEGO elements from early ideas to engineering handover, gaining practical experience in maturing concepts for production.",
   },
   {
     years: "2022",
     role: "Student Assistant",
     place: "Ready2LOOP",
+    logo: ready2loopLogo,
     text: "Worked with communication and project support for a circular economy research initiative.",
   },
 ];
@@ -78,7 +86,13 @@ function AboutPage() {
           {experience.map((item) => (
             <article className="experience-item" key={`${item.role}-${item.place}`}>
               <p className="experience-years">{item.years}</p>
-              <div><h3>{item.role}</h3><p className="experience-place">{item.place}</p><p>{item.text}</p></div>
+              <div>
+                <div className="experience-org">
+                  <img src={item.logo} alt="" className="experience-logo" />
+                  <div><h3>{item.role}</h3><p className="experience-place">{item.place}</p></div>
+                </div>
+                <p>{item.text}</p>
+              </div>
             </article>
           ))}
         </div>
