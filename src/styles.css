@@ -191,7 +191,29 @@
 .collage { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
 .fragment { position: absolute; margin: 0; opacity: 0; translate: var(--mouse-x, 0) var(--mouse-y, 0); will-change: transform, translate; animation: fragment-in .85s cubic-bezier(.22,1,.36,1) var(--delay) forwards, soft-breeze-a 6.8s ease-in-out calc(.85s + var(--delay)) infinite; }
 .fragment:nth-child(even) { animation-name: fragment-in, soft-breeze-b; animation-duration: .85s, 8.2s; }
-.fragment img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius); box-shadow: 0 14px 40px oklch(0.18 0.01 70 / 0.12); scale: var(--zoom, 1); transform-origin: center; will-change: scale; }
+.fragment img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius); box-shadow: 0 14px 40px oklch(0.18 0.01 70 / 0.12); scale: var(--zoom, 1); transform-origin: center; will-change: scale; cursor: pointer; pointer-events: auto; transition: opacity .5s ease; }
+.fragment.is-throwing img { animation: crumble-throw .9s cubic-bezier(.6,0,.35,1) forwards; cursor: default; pointer-events: none; }
+.fragment.is-gone img { opacity: 0; pointer-events: none; cursor: default; }
+
+@keyframes crumble-throw {
+  0%   { clip-path: inset(0% round var(--radius)); rotate: 0deg; scale: var(--zoom, 1); translate: 0 0; filter: brightness(1) saturate(1); }
+  22%  { clip-path: polygon(6% 2%, 94% 6%, 98% 90%, 4% 96%); rotate: -10deg; scale: .8; translate: 0 0; filter: brightness(.95) saturate(.9); }
+  45%  { clip-path: circle(48% at 52% 48%); rotate: 30deg; scale: .48; translate: calc(var(--trash-x, 0px) * .28) calc(var(--trash-y, 0px) * .28); filter: brightness(.85) saturate(.7); }
+  75%  { clip-path: circle(46% at 50% 50%); rotate: 210deg; scale: .22; translate: calc(var(--trash-x, 0px) * .82) calc(var(--trash-y, 0px) * .82); filter: brightness(.7) saturate(.5); }
+  100% { clip-path: circle(45% at 50% 50%); rotate: 330deg; scale: .04; translate: var(--trash-x, 0px) var(--trash-y, 0px); opacity: 0; filter: brightness(.55) saturate(.3); }
+}
+
+.trash-can { position: fixed; top: 2rem; right: 2rem; z-index: 4; width: clamp(2rem, 3.4vw, 2.75rem); color: var(--muted-foreground); opacity: .55; transition: opacity .35s ease; pointer-events: none; }
+.trash-can svg { display: block; width: 100%; height: auto; }
+.trash-can.is-bumped { animation: trash-bump .48s cubic-bezier(.34,1.56,.64,1); }
+.landing-stage.is-exiting .trash-can { opacity: 0; }
+
+@keyframes trash-bump {
+  0% { scale: 1; rotate: 0deg; }
+  35% { scale: 1.18; rotate: -7deg; }
+  65% { scale: .92; rotate: 5deg; }
+  100% { scale: 1; rotate: 0deg; }
+}
 .fragment-sun { --tilt: -3deg; top: 3%; left: 2%; width: clamp(13rem, 24vw, 30rem); aspect-ratio: 1.5; }
 .fragment-books { --tilt: 2deg; bottom: 3%; left: 8%; width: clamp(11rem, 20vw, 24rem); aspect-ratio: 1; }
 .fragment-park { --tilt: -2deg; top: 6%; right: 6%; width: clamp(10rem, 21vw, 25rem); aspect-ratio: 1.4; }
@@ -303,6 +325,7 @@
   .identity p { max-width: 22rem; line-height: 1.7; }
   .edition { top: 1rem; left: 1rem; }
   .location { right: 1rem; bottom: 1rem; }
+  .trash-can { top: 1rem; right: 1rem; width: 1.7rem; }
   .landing-stage.is-exiting .identity { transform: translate(calc(-50vw + 5.5rem), calc(-50vh + 3.8rem)) scale(.28); }
   .about-page { padding-top: 1.25rem; }
   .about-header { min-height: 6rem; }
@@ -325,4 +348,5 @@
 @media (prefers-reduced-motion: reduce) {
   .fragment { opacity: 1; translate: none; animation: none; transform: rotate(var(--tilt, 0deg)); }
   .enter-label, .identity h1, .identity p { transition: none; }
+  .trash-can.is-bumped { animation: none; }
 }

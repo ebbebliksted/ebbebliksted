@@ -1,5 +1,5 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { useEffect, useRef, useState, type CSSProperties, type MouseEvent } from "react";
+import { useEffect, useRef, useState, type AnimationEvent, type CSSProperties, type MouseEvent } from "react";
 
 import bigSun from "@/assets/BigSun.png.asset.json";
 import books from "@/assets/Bogreolen.png.asset.json";
@@ -45,9 +45,14 @@ const fragments = [
   { src: thesisCover, alt: "Master's thesis cover page", className: "fragment fragment-thesis", depth: -0.95, exit: "10vw, 85vh" },
 ];
 
+type ThrowStage = "idle" | "throwing" | "gone";
+
 function LandingPage() {
   const stageRef = useRef<HTMLElement>(null);
+  const trashRef = useRef<HTMLDivElement>(null);
+  const throwOffsets = useRef<Record<string, { x: number; y: number }>>({});
   const [isExiting, setIsExiting] = useState(false);
+  const [throwStages, setThrowStages] = useState<Record<string, ThrowStage>>({});
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -119,23 +124,75 @@ function LandingPage() {
     window.setTimeout(() => void navigate({ to: "/about" }), 950);
   };
 
+  const throwFragmentAway = (src: string, imageEl: HTMLImageElement) => {
+    if ((throwStages[src] ?? "idle") !== "idle") return;
+
+    const trash = trashRef.current;
+    if (!trash) return;
+
+    const imgRect = imageEl.getBoundingClientRect();
+    const trashRect = trash.getBoundingClientRect();
+    throwOffsets.current[src] = {
+      x: trashRect.left + trashRect.width / 2 - (imgRect.left + imgRect.width / 2),
+      y: trashRect.top + trashRect.height / 2 - (imgRect.top + imgRect.height / 2),
+    };
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setThrowStages((prev) => ({ ...prev, [src]: "gone" }));
+      window.setTimeout(() => setThrowStages((prev) => ({ ...prev, [src]: "idle" })), 2600);
+      return;
+    }
+
+    setThrowStages((prev) => ({ ...prev, [src]: "throwing" }));
+  };
+
+  const handleThrowAnimationEnd = (src: string, event: AnimationEvent<HTMLImageElement>) => {
+    if (event.animationName !== "crumble-throw") return;
+
+    setThrowStages((prev) => ({ ...prev, [src]: "gone" }));
+    trashRef.current?.classList.add("is-bumped");
+    window.setTimeout(() => trashRef.current?.classList.remove("is-bumped"), 480);
+    window.setTimeout(() => setThrowStages((prev) => ({ ...prev, [src]: "idle" })), 3400);
+  };
+
   return (
     <main ref={stageRef} className={`landing-stage${isExiting ? " is-exiting" : ""}`}>
       <div className="collage" aria-hidden="true">
-        {fragments.map((fragment, index) => (
-          <figure
-            className={fragment.className}
-            data-depth={fragment.depth}
-            key={fragment.src}
-            style={{
-              "--delay": `${index * 0.1}s`,
-              "--exit-x": fragment.exit.split(", ")[0],
-              "--exit-y": fragment.exit.split(", ")[1],
-            } as CSSProperties}
-          >
-            <img src={fragment.src} alt="" draggable={false} />
-          </figure>
-        ))}
+        {fragments.map((fragment, index) => {
+          const stage = throwStages[fragment.src] ?? "idle";
+          const offset = throwOffsets.current[fragment.src];
+          return (
+            <figure
+              className={`${fragment.className}${stage === "throwing" ? " is-throwing" : ""}${stage === "gone" ? " is-gone" : ""}`}
+              data-depth={fragment.depth}
+              key={fragment.src}
+              style={{
+                "--delay": `${index * 0.1}s`,
+                "--exit-x": fragment.exit.split(", ")[0],
+                "--exit-y": fragment.exit.split(", ")[1],
+                "--trash-x": offset ? `${offset.x}px` : "0px",
+                "--trash-y": offset ? `${offset.y}px` : "0px",
+              } as CSSProperties}
+            >
+              <img
+                src={fragment.src}
+                alt=""
+                draggable={false}
+                onClick={(event) => throwFragmentAway(fragment.src, event.currentTarget)}
+                onAnimationEnd={(event) => handleThrowAnimationEnd(fragment.src, event)}
+              />
+            </figure>
+          );
+        })}
+      </div>
+
+      <div className="trash-can" ref={trashRef} aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 14h28l-2.4 26.4A3 3 0 0 1 32.6 43H15.4a3 3 0 0 1-3-2.6L10 14Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+          <path d="M6 14h36" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+          <path d="M18 14V9a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v5" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+          <path d="M20 20v17M24 20v17M28 20v17" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+        </svg>
       </div>
 
       <Link to="/about" onClick={enterPortfolio} className="identity group" aria-label="Enter Ebbe Bliksted's portfolio">
