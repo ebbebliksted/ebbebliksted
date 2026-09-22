@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import workImage1 from "@/assets/work-placeholder-1.png";
-import workImage2 from "@/assets/work-placeholder-2.png";
+import urbanBloomImage from "@/assets/urban-bloom-phone.jpg.asset.json";
+import thesisCoverImage from "@/assets/speciale-forside.jpg.asset.json";
 import workImage3 from "@/assets/work-placeholder-3.png";
 import workImage4 from "@/assets/work-placeholder-4.png";
 
@@ -15,7 +15,7 @@ const projects: Record<string, {
   "urban-bloom": {
     title: "Urban Bloom",
     year: "2023",
-    image: workImage1,
+    image: urbanBloomImage.url,
     description: [
       "Urban Bloom asks how design can strengthen the bond between city dwellers and the ecosystems around them. Using the Social Implication Design method, the project researched urban ecology, behavioural psychology and municipal systems to understand what stops Copenhageners from engaging with biodiversity close to home.",
       "The result is a mobile platform that gives citizens the legal right and practical means to turn neglected pavement, curb strips and traffic islands into small, biodiversity-friendly plantings — developed in dialogue with Copenhagen Municipality and validated through expert interviews and a narrative-based study.",
@@ -30,7 +30,7 @@ const projects: Record<string, {
   "metal-additive-manufacturing": {
     title: "Sustainable Metal Additive Manufacturing",
     year: "2026",
-    image: workImage2,
+    image: thesisCoverImage.url,
     description: [
       "This thesis examines the sustainability of laser powder bed fusion (LPBF), a metal 3D-printing process increasingly used to produce injection-moulding inserts with complex, conformal cooling channels. Working with an industry partner's manufacturing team, the project combined a meta-analysis of existing research with a full cradle-to-grave Life Cycle Assessment of a production insert to identify where its environmental impact actually comes from.",
       "Based on the LCA, three improvement scenarios were developed and evaluated — relocating post-processing, substituting materials and lightweighting through topology optimisation — and tested for feasibility through interviews with the manufacturing team, weighing environmental gains against cost and organisational reality.",
