@@ -2,7 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import urbanBloomImage from "@/assets/urban-bloom-phone.jpg.asset.json";
 import thesisCoverImage from "@/assets/speciale-forside.jpg.asset.json";
 import designParkHero from "@/assets/design-park-hero.png";
-import workImage4 from "@/assets/work-placeholder-4.png";
+import legoClubHero from "@/assets/lego-club-5083.jpg";
 
 const projects: Record<string, {
   title: string;
@@ -57,20 +57,20 @@ const projects: Record<string, {
     ],
     skills: ["Systems-level design (N-model)", "Stakeholder research & interviews", "Co-creation workshops", "Product-service system design", "CAD & prototyping", "Business modelling"],
   },
-  "project-four": {
-    title: "Project Four",
-    year: "2023",
-    image: workImage4,
+  "the-club": {
+    title: "LEGO Element 5083 — The Club",
+    year: "2022",
+    image: legoClubHero,
     description: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-      "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
+      "During an internship on LEGO's element design team, I worked on Collectible Minifigures Series 25 & 26 — mainly the prosthetic legs in Series 25, and Orion's club, element 5083, in Series 26. The club needed to read as a heavy, hero-scale weapon in the hand of a tiny minifigure, while still moulding cleanly and holding up to the durability and safety standards every LEGO element has to meet.",
+      "I worked closely with creative leads, element leads and engineers, taking the piece from ideation and exploration sketches through 3D sculpting in ZBrush and precise surface modelling in Rhino, all the way to design for manufacturing.",
     ],
     learnings: [
-      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.",
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.",
-      "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.",
+      "Designing at minifigure scale is its own discipline — a silhouette has to stay readable and characterful in a few centimetres, which is a very different constraint than product design at full scale.",
+      "Moving between ZBrush's organic sculpting and Rhino's precise surfacing taught me how to keep a design's character intact while making it manufacturable.",
+      "Getting an element from concept to production is a team sport — creative intent only survives contact with moulding, safety and cost constraints through close collaboration with element leads and engineers.",
     ],
-    skills: ["Social innovation", "Qualitative research", "Cross-disciplinary collaboration"],
+    skills: ["3D sculpting (ZBrush)", "CAD modelling (Rhino)", "Design for manufacturing (DFM)", "Element/toy design", "Cross-functional collaboration"],
   },
 };
 

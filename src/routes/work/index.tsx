@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import urbanBloomImage from "@/assets/urban-bloom-phone.jpg.asset.json";
 import thesisCoverImage from "@/assets/speciale-forside.jpg.asset.json";
 import designParkHero from "@/assets/design-park-hero.png";
-import workImage4 from "@/assets/work-placeholder-4.png";
+import legoClubHero from "@/assets/lego-club-5083.jpg";
 
 export const Route = createFileRoute("/work/")({
   head: () => ({
@@ -41,11 +41,11 @@ const projects = [
     text: "A holistic systems-design project imagining DesignPark: a mobile makerspace in a shipping container that brings digital fabrication tools directly to primary schools, paired with a booking platform and ready-made curriculum.",
   },
   {
-    image: workImage4,
-    title: "Project Four",
-    slug: "project-four",
-    year: "2023",
-    text: "Id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
+    image: legoClubHero,
+    title: "LEGO Element 5083 — The Club",
+    slug: "the-club",
+    year: "2022",
+    text: "During an internship on LEGO's element design team, I designed Orion's club — element 5083 — for Collectible Minifigures Series 26, taking it from concept sculpt through to a manufacturable, mould-ready part.",
   },
 ];
 
@@ -64,7 +64,7 @@ function WorkPage() {
       </header>
 
       <section className="work-intro" aria-labelledby="work-heading">
-        <p className="about-kicker">Selected work · 2023—2026</p>
+        <p className="about-kicker">Selected work · 2022—2026</p>
         <h1 id="work-heading">Selected work</h1>
       </section>
 
