@@ -4,13 +4,16 @@ import { useEffect, useRef, useState, type CSSProperties, type MouseEvent } from
 import bigSun from "@/assets/BigSun.png.asset.json";
 import books from "@/assets/Bogreolen.png.asset.json";
 import designPark from "@/assets/DesignPark.png.asset.json";
+import explodedAssembly from "@/assets/exploded-assembly-drawing.jpg";
 import fitphone from "@/assets/Fitphone.png.asset.json";
 import flexmover from "@/assets/Flexmover.png.asset.json";
+import foamMockup from "@/assets/foam-mockup.webp";
 import playbook from "@/assets/Mission_Lab_Playbook.png.asset.json";
 import openBox from "@/assets/open_box.jpg.asset.json";
 import orion from "@/assets/Orion.jpg.asset.json";
 import packing from "@/assets/PACKING.png.asset.json";
 import picture from "@/assets/Picture3.jpg.asset.json";
+import thesisCover from "@/assets/thesis-cover.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -30,13 +33,16 @@ const fragments = [
   { src: bigSun.url, alt: "Interactive strength test at an outdoor event", className: "fragment fragment-sun", depth: 1, exit: "-75vw, -65vh" },
   { src: books.url, alt: "Book recommendation interface", className: "fragment fragment-books", depth: -0.7, exit: "-80vw, 70vh" },
   { src: designPark.url, alt: "Modular product display in an open container", className: "fragment fragment-park", depth: 0.8, exit: "75vw, -70vh" },
+  { src: explodedAssembly, alt: "Exploded technical drawing of a motorized mechanism", className: "fragment fragment-exploded", depth: 0.75, exit: "60vw, -75vh" },
   { src: fitphone.url, alt: "Technical drawing of a handheld product", className: "fragment fragment-fitphone", depth: -1.15, exit: "-75vw, 5vh" },
   { src: flexmover.url, alt: "Flexmover industrial transport concept", className: "fragment fragment-flex", depth: 0.65, exit: "80vw, 70vh" },
+  { src: foamMockup, alt: "Foam mockup of a handheld product", className: "fragment fragment-foam", depth: -0.5, exit: "-85vw, 15vh" },
   { src: playbook.url, alt: "Mission Lab playbook cover", className: "fragment fragment-playbook", depth: -0.85, exit: "5vw, -85vh" },
   { src: openBox.url, alt: "Electronics prototype in an open enclosure", className: "fragment fragment-box", depth: 1.1, exit: "-10vw, 90vh" },
   { src: orion.url, alt: "Orion character model", className: "fragment fragment-orion", depth: -1, exit: "85vw, -5vh" },
   { src: packing.url, alt: "Packaging simulation result", className: "fragment fragment-packing", depth: 0.9, exit: "75vw, 55vh" },
   { src: picture.url, alt: "Mobile interface prototype tested outdoors", className: "fragment fragment-phone", depth: -0.6, exit: "-55vw, 80vh" },
+  { src: thesisCover, alt: "Master's thesis cover page", className: "fragment fragment-thesis", depth: -0.95, exit: "10vw, 85vh" },
 ];
 
 function LandingPage() {
