@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import workImage1 from "@/assets/work-placeholder-1.png";
-import workImage2 from "@/assets/work-placeholder-2.png";
+import urbanBloomImage from "@/assets/urban-bloom-phone.jpg.asset.json";
+import thesisCoverImage from "@/assets/speciale-forside.jpg.asset.json";
 import workImage3 from "@/assets/work-placeholder-3.png";
 import workImage4 from "@/assets/work-placeholder-4.png";
 
@@ -20,14 +20,14 @@ export const Route = createFileRoute("/work/")({
 
 const projects = [
   {
-    image: workImage1,
+    image: urbanBloomImage.url,
     title: "Urban Bloom",
     slug: "urban-bloom",
     year: "2023",
     text: "A bachelor thesis exploring how design can turn neglected urban plots into biodiversity. Urban Bloom is a mobile platform that lets citizens claim and green disused spaces, in collaboration with Copenhagen Municipality.",
   },
   {
-    image: workImage2,
+    image: thesisCoverImage.url,
     title: "Sustainable Metal Additive Manufacturing",
     slug: "metal-additive-manufacturing",
     year: "2026",
@@ -72,7 +72,7 @@ function WorkPage() {
         {projects.map((project, index) => (
           <article className="work-item" key={project.title}>
             <div className="work-media">
-              <img src={project.image} alt={`Placeholder visual for ${project.title}`} width={1200} height={900} loading={index === 0 ? "eager" : "lazy"} />
+              <img src={project.image} alt={`Visual for ${project.title}`} width={1200} height={900} loading={index === 0 ? "eager" : "lazy"} />
             </div>
             <div className="work-meta">
               <p className="work-index">{String(index + 1).padStart(2, "0")} · {project.year}</p>
