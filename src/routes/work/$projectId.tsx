@@ -12,35 +12,35 @@ const projects: Record<string, {
   learnings: string[];
   skills: string[];
 }> = {
-  "project-one": {
-    title: "Project One",
-    year: "2026",
+  "urban-bloom": {
+    title: "Urban Bloom",
+    year: "2023",
     image: workImage1,
     description: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "Urban Bloom asks how design can strengthen the bond between city dwellers and the ecosystems around them. Using the Social Implication Design method, the project researched urban ecology, behavioural psychology and municipal systems to understand what stops Copenhageners from engaging with biodiversity close to home.",
+      "The result is a mobile platform that gives citizens the legal right and practical means to turn neglected pavement, curb strips and traffic islands into small, biodiversity-friendly plantings — developed in dialogue with Copenhagen Municipality and validated through expert interviews and a narrative-based study.",
     ],
     learnings: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-      "Ut labore et dolore magna aliqua — quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.",
+      "Designing for behaviour change means designing the surrounding system — permissions, seed access and municipal process — not just the app.",
+      "Grounding the concept in stakeholder interviews and literature before ideating kept the platform's rules realistic rather than aspirational.",
+      "A concept this civic needs iteration: validation surfaced real feedback the current prototype doesn't yet fully address.",
     ],
-    skills: ["Design thinking", "Prototyping", "User research", "Facilitation", "Project management"],
+    skills: ["Social Implication Design", "Stakeholder research", "Service design", "UX/UI prototyping", "Workshop facilitation"],
   },
-  "project-two": {
-    title: "Project Two",
-    year: "2025",
+  "metal-additive-manufacturing": {
+    title: "Sustainable Metal Additive Manufacturing",
+    year: "2026",
     image: workImage2,
     description: [
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-      "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+      "This thesis examines the sustainability of laser powder bed fusion (LPBF), a metal 3D-printing process increasingly used to produce injection-moulding inserts with complex, conformal cooling channels. Working with an industry partner's manufacturing team, the project combined a meta-analysis of existing research with a full cradle-to-grave Life Cycle Assessment of a production insert to identify where its environmental impact actually comes from.",
+      "Based on the LCA, three improvement scenarios were developed and evaluated — relocating post-processing, substituting materials and lightweighting through topology optimisation — and tested for feasibility through interviews with the manufacturing team, weighing environmental gains against cost and organisational reality.",
     ],
     learnings: [
-      "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur adipisci.",
-      "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil.",
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.",
+      "The printing step is often not the biggest contributor — post-processing and local energy mix can dominate a part's footprint more than the headline manufacturing technology.",
+      "A Life Cycle Assessment only creates change if its recommendations are feasible for the team that has to implement them.",
+      "Environmental improvements can trade off against each other — reducing one impact category sometimes increases another.",
     ],
-    skills: ["Systems thinking", "Co-creation", "Service design", "Stakeholder mapping"],
+    skills: ["Life Cycle Assessment", "Sustainability strategy", "Design Research Methodology", "Stakeholder interviews", "Industrial collaboration"],
   },
   "project-three": {
     title: "Project Three",
