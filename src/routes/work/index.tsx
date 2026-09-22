@@ -21,17 +21,17 @@ export const Route = createFileRoute("/work/")({
 const projects = [
   {
     image: workImage1,
-    title: "Project One",
-    slug: "project-one",
-    year: "2026",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    title: "Urban Bloom",
+    slug: "urban-bloom",
+    year: "2023",
+    text: "A bachelor thesis exploring how design can turn neglected urban plots into biodiversity. Urban Bloom is a mobile platform that lets citizens claim and green disused spaces, in collaboration with Copenhagen Municipality.",
   },
   {
     image: workImage2,
-    title: "Project Two",
-    slug: "project-two",
-    year: "2025",
-    text: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.",
+    title: "Sustainable Metal Additive Manufacturing",
+    slug: "metal-additive-manufacturing",
+    year: "2026",
+    text: "A master's thesis investigating the environmental footprint of metal 3D-printed tooling for injection moulding, in collaboration with an industrial manufacturing partner.",
   },
   {
     image: workImage3,
