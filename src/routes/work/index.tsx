@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import urbanBloomImage from "@/assets/urban-bloom-phone.jpg.asset.json";
-import thesisCoverImage from "@/assets/speciale-forside.jpg.asset.json";
+import thesisCoverImage from "@/assets/speciale-forside.jpg";
 import designParkHero from "@/assets/design-park-hero.png";
 import legoClubHero from "@/assets/lego-club-5083.jpg";
 import missionLabCover from "@/assets/mission-lab-playbook-cover.png";
@@ -28,7 +28,7 @@ const projects = [
     text: "A bachelor thesis exploring how design can turn neglected urban plots into biodiversity. Urban Bloom is a mobile platform that lets citizens claim and green disused spaces, in collaboration with Copenhagen Municipality.",
   },
   {
-    image: thesisCoverImage.url,
+    image: thesisCoverImage,
     title: "Sustainable Metal Additive Manufacturing",
     slug: "metal-additive-manufacturing",
     year: "2026",

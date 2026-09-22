@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import urbanBloomImage from "@/assets/urban-bloom-phone.jpg.asset.json";
-import thesisCoverImage from "@/assets/speciale-forside.jpg.asset.json";
+import thesisCoverImage from "@/assets/speciale-forside.jpg";
 import designParkHero from "@/assets/design-park-hero.png";
 import legoClubHero from "@/assets/lego-club-5083.jpg";
 import missionLabCover from "@/assets/mission-lab-playbook-cover.png";
@@ -31,7 +31,7 @@ const projects: Record<string, {
   "metal-additive-manufacturing": {
     title: "Sustainable Metal Additive Manufacturing",
     year: "2026",
-    image: thesisCoverImage.url,
+    image: thesisCoverImage,
     description: [
       "This thesis examines the sustainability of laser powder bed fusion (LPBF), a metal 3D-printing process increasingly used to produce injection-moulding inserts with complex, conformal cooling channels. Working with an industry partner's manufacturing team, the project combined a meta-analysis of existing research with a full cradle-to-grave Life Cycle Assessment of a production insert to identify where its environmental impact actually comes from.",
       "Based on the LCA, three improvement scenarios were developed and evaluated — relocating post-processing, substituting materials and lightweighting through topology optimisation — and tested for feasibility through interviews with the manufacturing team, weighing environmental gains against cost and organisational reality.",
