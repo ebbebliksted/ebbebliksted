@@ -5,6 +5,7 @@ import designParkHero from "@/assets/design-park-hero.png";
 import legoClubHero from "@/assets/lego-club-5083.jpg";
 import missionLabCover from "@/assets/mission-lab-playbook-cover.png";
 import bigSunHero from "@/assets/big-sun-uv-tower.webp";
+import signatureNameTitle from "@/assets/signature-name-title.png";
 
 const projects: Record<string, {
   title: string;
@@ -137,9 +138,8 @@ function ProjectPage() {
   return (
     <main className="about-page project-page">
       <header className="about-header">
-        <Link to="/" className="about-identity">
-          <strong>Ebbe Bliksted</strong>
-          <span>Cand.poly Design &amp; Innovation</span>
+        <Link to="/" className="about-identity" aria-label="Ebbe Bliksted, Cand.poly Design & Innovation — home">
+          <img src={signatureNameTitle} alt="Ebbe Bliksted, Cand.poly Design & Innovation" className="about-identity-signature" />
         </Link>
         <nav aria-label="Portfolio navigation">
           <Link to="/work">Selected work</Link>

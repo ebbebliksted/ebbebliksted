@@ -225,6 +225,7 @@
 .about-header { display: flex; align-items: flex-start; justify-content: space-between; min-height: 7.5rem; }
 .about-identity { display: flex; flex-direction: column; color: var(--foreground); text-decoration: none; }
 .about-identity strong { font-family: var(--font-serif); font-size: 1.7rem; font-weight: 400; line-height: 1; }
+.about-identity-signature { display: block; width: clamp(8rem, 12vw, 10.5rem); height: auto; }
 .about-identity span { margin-top: .45rem; font-size: .55rem; text-transform: uppercase; color: var(--muted-foreground); }
 .about-header nav { display: flex; gap: 2rem; }
 .about-header nav a, .about-contact a { color: var(--foreground); font-size: .67rem; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: .2rem; }
@@ -235,6 +236,7 @@
 .about-portrait figcaption, .about-portrait::after { content: none; }
 .about-intro h1 { max-width: 13ch; margin: 0; font-family: var(--font-serif); font-size: clamp(3.4rem, 7vw, 7.5rem); font-weight: 400; line-height: .94; }
 .about-lead { grid-column: 2; max-width: 55rem; margin: clamp(3rem, 8vh, 6rem) 0 0; font-size: clamp(1.1rem, 1.7vw, 1.6rem); line-height: 1.6; }
+.about-lead-cta { grid-column: 2; justify-self: start; margin-top: 2rem; }
 .about-contact { grid-column: 2; display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 2.25rem; }
 .about-section { display: grid; grid-template-columns: minmax(8rem, 1fr) minmax(0, 5.5fr); column-gap: clamp(2rem, 6vw, 7rem); padding: clamp(4rem, 10vh, 8rem) 0; border-top: 1px solid var(--border); }
 .about-section-label { display: flex; gap: 1.25rem; align-items: baseline; }
@@ -310,7 +312,7 @@
   .about-intro, .about-section { grid-template-columns: 1fr; }
   .about-intro { padding: 5vh 0 12vh; }
   .about-intro h1 { margin-top: 2rem; }
-  .about-lead, .about-contact { grid-column: 1; }
+  .about-lead, .about-lead-cta, .about-contact { grid-column: 1; }
   .about-portrait { grid-column: 1; grid-row: auto; margin: 2.5rem 0 0; max-width: 14rem; }
   .about-section-label { margin-bottom: 3rem; }
   .experience-item { grid-template-columns: 1fr; gap: 1rem; }

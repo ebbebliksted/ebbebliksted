@@ -4,6 +4,7 @@ import atvLogo from "@/assets/logos/atv.svg";
 import dtuLogo from "@/assets/logos/dtu.svg";
 import legoLogo from "@/assets/logos/lego.svg";
 import ready2loopLogo from "@/assets/logos/ready2loop.svg";
+import signatureNameTitle from "@/assets/signature-name-title.png";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -57,9 +58,8 @@ function AboutPage() {
   return (
     <main className="about-page">
       <header className="about-header">
-        <Link to="/" className="about-identity">
-          <strong>Ebbe Bliksted</strong>
-          <span>Cand.poly Design &amp; Innovation</span>
+        <Link to="/" className="about-identity" aria-label="Ebbe Bliksted, Cand.poly Design & Innovation — home">
+          <img src={signatureNameTitle} alt="Ebbe Bliksted, Cand.poly Design & Innovation" className="about-identity-signature" />
         </Link>
         <nav aria-label="Portfolio navigation">
           <Link to="/work">Selected work</Link>
@@ -74,6 +74,7 @@ function AboutPage() {
         </figure>
         <h1 id="about-heading">I design products, systems and collaborations for complex problems.</h1>
         <p className="about-lead">Fresh out of DTU I come with with a masters degree in Design &amp; Innovation,  more than two years of experience from the think tank ATV, where my job has been to bring different people together and help them find real solutions to societal challenges through Mission oriented innovation and experience with product development, bringing projects from early stage concepting all the way to production ready products.</p>
+        <Link to="/work" className="work-read-more about-lead-cta">Selected work <span aria-hidden="true">↗</span></Link>
         <div className="about-contact">
           <a href="mailto:ebbeab@hotmail.com">ebbeab@hotmail.com</a>
           <a href="tel:+4521496615">+45 21 49 66 15</a>
