@@ -72,7 +72,7 @@ function AboutPage() {
         <figure className="about-portrait">
           <img src={portraitAsset.url} alt="Portrait of Ebbe Bliksted" width={800} height={1000} />
         </figure>
-        <h1 id="about-heading">I design products, systems and collaborations for complex problems.</h1>
+        <h1 id="about-heading">I design products, systems and collaborations for complex problems.... and also simple problems</h1>
         <p className="about-lead">Fresh out of DTU I come with with a masters degree in Design &amp; Innovation,  more than two years of experience from the think tank ATV, where my job has been to bring different people together and help them find real solutions to societal challenges through Mission oriented innovation and experience with product development, bringing projects from early stage concepting all the way to production ready products.</p>
         <div className="about-contact">
           <a href="mailto:ebbeab@hotmail.com">ebbeab@hotmail.com</a>
