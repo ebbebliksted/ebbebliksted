@@ -79,13 +79,13 @@ const projects: Record<string, {
     year: "2022",
     image: legoClubHero,
     description: [
-      "During my internship on LEGO's element design team, I worked on Collectible Minifigures Series 25 and 26, mainly the prosthetic legs in Series 25 and Orion's club, element 5083, in Series 26. The club had to look like a heavy, hero-scale weapon in the hand of a tiny minifigure, but still mould cleanly and meet the same durability and safety standards every LEGO element has to meet.",
+      "During my internship on LEGO's element design team, I worked on Collectible Minifigures Series 25 and 26, mainly the prosthetic legs in Series 25 and Orion's club, element 5083, in Series 26. The club had to look like the club the greek god Orion is often depicted holding.  It should mould cleanly and meet the same durability and safety standards every LEGO element has to meet.",
       "I worked closely with creative leads, element leads and engineers, and took the piece all the way from early exploration sketches, through 3D sculpting in ZBrush and surface modelling in Rhino, to design for manufacturing.",
     ],
     learnings: [
-      "Designing at minifigure scale is its own discipline. A silhouette has to stay readable and full of character in just a few centimetres, which is a very different constraint than product design at full scale.",
+      "When designing at a small scale all details matter. ",
       "Moving between ZBrush's organic sculpting and Rhino's precise surfacing taught me how to keep a design's character intact while making it manufacturable.",
-      "Getting an element from concept to production is a team sport. Creative intent only survives moulding, safety and cost constraints if you work closely with element leads and engineers along the way.",
+      "Getting an element from concept to production is a collaborative effort. Creative intent only survives moulding, safety and cost constraints if you work closely with element leads and engineers along the way.",
     ],
     skills: ["3D sculpting (ZBrush)", "CAD modelling (Rhino)", "Design for manufacturing (DFM)", "Element/toy design", "Cross-functional collaboration"],
   },
