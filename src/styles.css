@@ -173,7 +173,7 @@
   place-items: center;
   overflow: hidden;
   isolation: isolate;
-  background: var(--background) url("./assets/landing-background.jpg") center / contain no-repeat;
+  background: var(--background) url("./assets/landing-background.jpg") center / cover no-repeat;
 }
 
 .landing-stage::after { content: ""; position: absolute; inset: 0; z-index: 5; pointer-events: none; background: var(--background); opacity: 0; transition: opacity .35s ease .68s; }
@@ -192,19 +192,19 @@
 .fragment { position: absolute; margin: 0; opacity: 0; translate: var(--mouse-x, 0) var(--mouse-y, 0); will-change: transform, translate; animation: fragment-in .85s cubic-bezier(.22,1,.36,1) var(--delay) forwards, soft-breeze-a 6.8s ease-in-out calc(.85s + var(--delay)) infinite; }
 .fragment:nth-child(even) { animation-name: fragment-in, soft-breeze-b; animation-duration: .85s, 8.2s; }
 .fragment img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius); box-shadow: 0 14px 40px oklch(0.18 0.01 70 / 0.12); scale: var(--zoom, 1); transform-origin: center; will-change: scale; }
-.fragment-sun { --tilt: -3deg; top: 3%; left: 2%; width: clamp(13rem, 24vw, 30rem); aspect-ratio: 1.5; }
-.fragment-books { --tilt: 2deg; bottom: 0%; left: 8%; width: clamp(11rem, 20vw, 24rem); aspect-ratio: 1; }
-.fragment-park { --tilt: -2deg; top: 6%; right: 6%; width: clamp(10rem, 21vw, 25rem); aspect-ratio: 1.4; }
-.fragment-exploded { --tilt: -3deg; top: 11%; left: 56%; width: clamp(9rem, 15vw, 17rem); aspect-ratio: 1.4; }
-.fragment-fitphone { --tilt: 3deg; top: 33%; left: 1%; width: clamp(6rem, 9.5vw, 10.5rem); aspect-ratio: .7; }
-.fragment-flex { --tilt: 2deg; bottom: 3%; right: 3%; width: clamp(13rem, 25vw, 30rem); aspect-ratio: 1.78; }
-.fragment-foam { --tilt: 4deg; top: 21%; left: 4%; width: clamp(6rem, 10vw, 11rem); aspect-ratio: .75; }
-.fragment-playbook { --tilt: -4deg; top: 3%; left: 39%; width: clamp(8rem, 12.5vw, 13.5rem); aspect-ratio: 1.43; }
-.fragment-box { --tilt: -2deg; bottom: -8%; left: 35%; width: clamp(9rem, 15vw, 16rem); aspect-ratio: .75; }
-.fragment-orion { --tilt: 4deg; top: 37%; right: 2%; width: clamp(5rem, 8vw, 9rem); aspect-ratio: .76; }
-.fragment-packing { --tilt: -1deg; bottom: 9%; right: 19%; width: clamp(10rem, 17.5vw, 19rem); aspect-ratio: 1.78; }
-.fragment-phone { --tilt: 3deg; bottom: 4%; left: 26%; width: clamp(6rem, 9.5vw, 10rem); aspect-ratio: .71; }
-.fragment-thesis { --tilt: -2deg; bottom: 3%; left: 58%; width: clamp(6rem, 10.5vw, 11.5rem); aspect-ratio: .77; }
+.fragment-sun { --tilt: -3deg; top: 3%; left: 2%; width: clamp(9rem, 16vw, 20rem); aspect-ratio: 1.5; }
+.fragment-books { --tilt: 2deg; bottom: 0%; left: 8%; width: clamp(7.5rem, 13vw, 16rem); aspect-ratio: 1; }
+.fragment-park { --tilt: -2deg; top: 6%; right: 6%; width: clamp(7rem, 14vw, 17rem); aspect-ratio: 1.4; }
+.fragment-exploded { --tilt: -3deg; top: 10%; left: 58%; width: clamp(6.5rem, 10vw, 12rem); aspect-ratio: 1.4; }
+.fragment-fitphone { --tilt: 3deg; top: 30%; left: 1%; width: clamp(4.5rem, 6.5vw, 7.5rem); aspect-ratio: .7; }
+.fragment-flex { --tilt: 2deg; bottom: 3%; right: 3%; width: clamp(9rem, 16vw, 20rem); aspect-ratio: 1.78; }
+.fragment-foam { --tilt: 4deg; top: 19%; left: 4%; width: clamp(4.5rem, 6.5vw, 7.5rem); aspect-ratio: .75; }
+.fragment-playbook { --tilt: -4deg; top: 3%; left: 40%; width: clamp(6rem, 8.5vw, 9.5rem); aspect-ratio: 1.43; }
+.fragment-box { --tilt: -2deg; bottom: -8%; left: 36%; width: clamp(6.5rem, 10vw, 11rem); aspect-ratio: .75; }
+.fragment-orion { --tilt: 4deg; top: 34%; right: 2%; width: clamp(4rem, 5.5vw, 6.5rem); aspect-ratio: .76; }
+.fragment-packing { --tilt: -1deg; bottom: 7%; right: 21%; width: clamp(7rem, 12vw, 13rem); aspect-ratio: 1.78; }
+.fragment-phone { --tilt: 3deg; bottom: 4%; left: 27%; width: clamp(4.5rem, 6.5vw, 7rem); aspect-ratio: .71; }
+.fragment-thesis { --tilt: -2deg; bottom: 2%; left: 60%; width: clamp(4.5rem, 7vw, 8rem); aspect-ratio: .77; }
 
 .identity { display: block; padding: 3rem; text-align: center; text-decoration: none; color: var(--foreground); transition: transform .9s cubic-bezier(.76,0,.24,1); }
 .identity h1 { margin: 0; font-family: var(--font-serif); font-size: clamp(3.6rem, 7vw, 7rem); font-weight: 400; line-height: .95; letter-spacing: 0; transition: color .45s ease; }
@@ -288,19 +288,19 @@
 @keyframes about-reveal { from { opacity: 0; } to { opacity: 1; } }
 
 @media (max-width: 700px) {
-  .fragment-sun { width: 42vw; left: -8%; }
-  .fragment-books { width: 36vw; left: -6%; bottom: 7%; }
-  .fragment-park { width: 38vw; right: -8%; }
-  .fragment-exploded { width: 27vw; left: 54%; top: 12%; }
-  .fragment-fitphone { width: 19vw; left: 3%; top: 36%; }
-  .fragment-flex { width: 46vw; right: -9%; bottom: 5%; }
-  .fragment-foam { width: 20vw; left: 5%; top: 22%; }
-  .fragment-playbook { width: 24vw; left: 41%; top: 3%; }
-  .fragment-box { width: 25vw; left: 38%; bottom: -4%; }
-  .fragment-orion { width: 15vw; right: 4%; top: 37%; }
-  .fragment-packing { width: 31vw; right: 8%; bottom: 25%; }
-  .fragment-phone { width: 17vw; left: 25%; bottom: 20%; }
-  .fragment-thesis { width: 19vw; left: 58%; bottom: 3%; }
+  .fragment-sun { width: 32vw; left: -8%; }
+  .fragment-books { width: 28vw; left: -6%; bottom: 7%; }
+  .fragment-park { width: 28vw; right: -8%; }
+  .fragment-exploded { width: 20vw; left: 54%; top: 12%; }
+  .fragment-fitphone { width: 14vw; left: 3%; top: 20%; }
+  .fragment-flex { width: 34vw; right: -9%; bottom: 5%; }
+  .fragment-foam { width: 15vw; left: 5%; top: 16%; }
+  .fragment-playbook { width: 18vw; left: 41%; top: 3%; }
+  .fragment-box { width: 19vw; left: 38%; bottom: -4%; }
+  .fragment-orion { width: 11vw; right: 4%; top: 18%; }
+  .fragment-packing { width: 22vw; right: 8%; bottom: 16%; }
+  .fragment-phone { width: 13vw; left: 25%; bottom: 12%; }
+  .fragment-thesis { width: 14vw; left: 58%; bottom: 3%; }
   .identity { padding: 1rem; }
   .identity h1 { max-width: 7ch; }
   .identity p { max-width: 22rem; line-height: 1.7; }
