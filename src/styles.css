@@ -192,14 +192,14 @@
 .fragment { position: absolute; margin: 0; opacity: 0; translate: var(--mouse-x, 0) var(--mouse-y, 0); will-change: transform, translate; animation: fragment-in .85s cubic-bezier(.22,1,.36,1) var(--delay) forwards, soft-breeze-a 6.8s ease-in-out calc(.85s + var(--delay)) infinite; }
 .fragment:nth-child(even) { animation-name: fragment-in, soft-breeze-b; animation-duration: .85s, 8.2s; }
 .fragment img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius); box-shadow: 0 14px 40px oklch(0.18 0.01 70 / 0.12); scale: var(--zoom, 1); transform-origin: center; will-change: scale; }
-.fragment-sun { --tilt: -3deg; top: 3%; left: 2%; width: clamp(9rem, 16vw, 20rem); aspect-ratio: 1.5; }
+.fragment-sun { --tilt: -3deg; top: 3%; left: 2%; width: clamp(11rem, 20vw, 25rem); aspect-ratio: 1.5; }
 .fragment-books { --tilt: 2deg; bottom: 0%; left: 8%; width: clamp(7.5rem, 13vw, 16rem); aspect-ratio: 1; }
-.fragment-park { --tilt: -2deg; top: 6%; right: 6%; width: clamp(7rem, 14vw, 17rem); aspect-ratio: 1.4; }
-.fragment-exploded { --tilt: -3deg; top: 10%; left: 58%; width: clamp(6.5rem, 10vw, 12rem); aspect-ratio: 1.4; }
+.fragment-park { --tilt: -2deg; top: 6%; right: 6%; width: clamp(8.5rem, 17vw, 21rem); aspect-ratio: 1.4; }
+.fragment-exploded { --tilt: -3deg; top: 10%; left: 58%; width: clamp(7.5rem, 12.5vw, 14rem); aspect-ratio: 1.4; }
 .fragment-fitphone { --tilt: 3deg; top: 30%; left: 1%; width: clamp(4.5rem, 6.5vw, 7.5rem); aspect-ratio: .7; }
 .fragment-flex { --tilt: 2deg; bottom: 3%; right: 3%; width: clamp(9rem, 16vw, 20rem); aspect-ratio: 1.78; }
 .fragment-foam { --tilt: 4deg; top: 19%; left: 4%; width: clamp(4.5rem, 6.5vw, 7.5rem); aspect-ratio: .75; }
-.fragment-playbook { --tilt: -4deg; top: 3%; left: 40%; width: clamp(6rem, 8.5vw, 9.5rem); aspect-ratio: 1.43; }
+.fragment-playbook { --tilt: -4deg; top: 3%; left: 40%; width: clamp(7rem, 10.5vw, 11.5rem); aspect-ratio: 1.43; }
 .fragment-box { --tilt: -2deg; bottom: -8%; left: 36%; width: clamp(6.5rem, 10vw, 11rem); aspect-ratio: .75; }
 .fragment-orion { --tilt: 4deg; top: 34%; right: 2%; width: clamp(4rem, 5.5vw, 6.5rem); aspect-ratio: .76; }
 .fragment-packing { --tilt: -1deg; bottom: 7%; right: 21%; width: clamp(7rem, 12vw, 13rem); aspect-ratio: 1.78; }
@@ -288,14 +288,14 @@
 @keyframes about-reveal { from { opacity: 0; } to { opacity: 1; } }
 
 @media (max-width: 700px) {
-  .fragment-sun { width: 32vw; left: -8%; }
+  .fragment-sun { width: 38vw; left: -8%; }
   .fragment-books { width: 28vw; left: -6%; bottom: 7%; }
-  .fragment-park { width: 28vw; right: -8%; }
-  .fragment-exploded { width: 20vw; left: 54%; top: 12%; }
+  .fragment-park { width: 33vw; right: -8%; }
+  .fragment-exploded { width: 24vw; left: 54%; top: 12%; }
   .fragment-fitphone { width: 14vw; left: 3%; top: 20%; }
   .fragment-flex { width: 34vw; right: -9%; bottom: 5%; }
   .fragment-foam { width: 15vw; left: 5%; top: 16%; }
-  .fragment-playbook { width: 18vw; left: 41%; top: 3%; }
+  .fragment-playbook { width: 22vw; left: 41%; top: 3%; }
   .fragment-box { width: 19vw; left: 38%; bottom: -4%; }
   .fragment-orion { width: 11vw; right: 4%; top: 18%; }
   .fragment-packing { width: 22vw; right: 8%; bottom: 16%; }
