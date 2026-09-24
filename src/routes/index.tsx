@@ -18,9 +18,9 @@ import thesisCover from "@/assets/thesis-cover.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Ebbe Bliksted — Design & Innovation" },
+      { title: "Ebbe Bliksted · Design & Innovation" },
       { name: "description", content: "Portfolio of Ebbe Bliksted, Cand.poly in Design & Innovation." },
-      { property: "og:title", content: "Ebbe Bliksted — Design & Innovation" },
+      { property: "og:title", content: "Ebbe Bliksted · Design & Innovation" },
       { property: "og:description", content: "Portfolio of Ebbe Bliksted, Cand.poly in Design & Innovation." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

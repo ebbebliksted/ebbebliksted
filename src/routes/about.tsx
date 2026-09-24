@@ -8,9 +8,9 @@ import ready2loopLogo from "@/assets/logos/ready2loop.svg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Ebbe Bliksted" },
+      { title: "About · Ebbe Bliksted" },
       { name: "description", content: "About Ebbe Bliksted, designer and innovation specialist." },
-      { property: "og:title", content: "About — Ebbe Bliksted" },
+      { property: "og:title", content: "About · Ebbe Bliksted" },
       { property: "og:description", content: "About Ebbe Bliksted, designer and innovation specialist." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -21,32 +21,32 @@ export const Route = createFileRoute("/about")({
 
 const experience = [
   {
-    years: "2024—2026",
+    years: "2024-2026",
     role: "Student Assistant",
-    place: "ATV — Danish Academy of Technical Sciences",
+    place: "ATV, Danish Academy of Technical Sciences",
     logo: atvLogo,
-    text: "Developed and facilitated cross-disciplinary Mission Labs connecting universities, companies and public authorities. Translated qualitative and quantitative insights into analyses, reports, recommendations and decision material.",
+    text: "I develop and run Mission Labs where people from universities, companies and public authorities work on the same problem together. I also turn what comes out of it into analyses, reports and recommendations that people can actually use.",
   },
   {
     years: "2023",
     role: "Teaching Assistant",
     place: "Technical University of Denmark",
     logo: dtuLogo,
-    text: "Supported students in the course Design Thinking & Sociotechnical Systems and guided sociotechnical design projects.",
+    text: "Helped students through the course Design Thinking & Sociotechnical Systems and guided their design projects.",
   },
   {
     years: "2022",
     role: "Element Designer",
     place: "The LEGO Group",
     logo: legoLogo,
-    text: "Developed new LEGO elements from early ideas to engineering handover, gaining practical experience in maturing concepts for production.",
+    text: "Worked on new LEGO elements from the first sketches all the way to engineering handover, and learned a lot about what it actually takes to get a concept ready for production.",
   },
   {
     years: "2022",
     role: "Student Assistant",
     place: "Ready2LOOP",
     logo: ready2loopLogo,
-    text: "Worked with communication and project support for a circular economy research initiative.",
+    text: "Helped with communication and general project support for a research project on circular economy.",
   },
 ];
 
@@ -72,8 +72,8 @@ function AboutPage() {
         <figure className="about-portrait">
           <img src={portraitAsset.url} alt="Portrait of Ebbe Bliksted" width={800} height={1000} />
         </figure>
-        <h1 id="about-heading">I design products, systems and collaborations for complex challenges.</h1>
-        <p className="about-lead">I’m a newly graduated design engineer from DTU with a strong methodological toolkit spanning design thinking, product development and qualitative research. Through more than two years at the think tank ATV, I have facilitated cross-disciplinary innovation across public authorities, universities and companies.</p>
+        <h1 id="about-heading">I design products, systems and collaborations for complex problems.</h1>
+        <p className="about-lead">I'm fresh out of DTU with a degree in Design & Innovation, and more than two years of experience from the think tank ATV, where my job has been to bring very different people together and help them find real solutions to big societal challenges. I like design thinking, product development and understanding what people actually need, and I'm still very much in the mood to keep learning.</p>
         <div className="about-contact">
           <a href="mailto:ebbeab@hotmail.com">ebbeab@hotmail.com</a>
           <a href="tel:+4521496615">+45 21 49 66 15</a>
@@ -101,9 +101,9 @@ function AboutPage() {
       <section className="about-section" aria-labelledby="education-heading">
         <div className="about-section-label"><span>02</span><h2 id="education-heading">Education</h2></div>
         <div className="education-grid">
-          <article><p>2024—2026</p><h3>MSc Design &amp; Innovation</h3><span>Technical University of Denmark</span><p>Sustainable products, systems and services. Thesis on life cycle analysis and sustainability improvements for metal 3D-printed injection mould inserts.</p></article>
-          <article><p>2025</p><h3>Industrial Engineering &amp; Technology Management</h3><span>POSTECH · South Korea</span><p>International exchange at Pohang University of Science and Technology.</p></article>
-          <article><p>2020—2023</p><h3>BSc Design &amp; Innovation</h3><span>Technical University of Denmark</span><p>User-centred design and social innovation. Bachelor project on sociotechnical design and biodiversity in Copenhagen.</p></article>
+          <article><p>2024-2026</p><h3>MSc Design &amp; Innovation</h3><span>Technical University of Denmark</span><p>Focused on sustainable products, systems and services. My thesis looked at life cycle analysis and sustainability improvements for metal 3D printed injection mould inserts.</p></article>
+          <article><p>2025</p><h3>Industrial Engineering &amp; Technology Management</h3><span>POSTECH · South Korea</span><p>Exchange semester at Pohang University of Science and Technology.</p></article>
+          <article><p>2020-2023</p><h3>BSc Design &amp; Innovation</h3><span>Technical University of Denmark</span><p>Focused on user-centred design and social innovation. My bachelor project was about sociotechnical design and biodiversity in Copenhagen.</p></article>
         </div>
       </section>
 

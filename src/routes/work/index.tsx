@@ -8,9 +8,9 @@ import missionLabCover from "@/assets/mission-lab-playbook-cover.png";
 export const Route = createFileRoute("/work/")({
   head: () => ({
     meta: [
-      { title: "Selected Work — Ebbe Bliksted" },
+      { title: "Selected Work · Ebbe Bliksted" },
       { name: "description", content: "Selected design and innovation work by Ebbe Bliksted." },
-      { property: "og:title", content: "Selected Work — Ebbe Bliksted" },
+      { property: "og:title", content: "Selected Work · Ebbe Bliksted" },
       { property: "og:description", content: "Selected design and innovation work by Ebbe Bliksted." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -25,35 +25,35 @@ const projects = [
     title: "Sustainable Metal Additive Manufacturing",
     slug: "metal-additive-manufacturing",
     year: "2026",
-    text: "A master's thesis investigating the environmental footprint of metal 3D-printed tooling for injection moulding, in collaboration with an industrial manufacturing partner.",
+    text: "My master's thesis on the environmental footprint of metal 3D printed tooling for injection moulding, done in collaboration with an industrial manufacturing partner.",
   },
   {
     image: missionLabCover,
     title: "Mission Lab Playbook",
     slug: "mission-lab-playbook",
     year: "2025",
-    text: "A working document for ATV — the Danish Academy of Technical Sciences — on mission-oriented innovation, condensing input from experts across user involvement, futures studies, design and climate IT into a playbook that's quick to read and put into practice.",
+    text: "A working document I made for ATV, the Danish Academy of Technical Sciences, about mission-oriented innovation. I took input from experts in user involvement, futures studies, design and climate IT and turned it into a playbook that's quick to read and actually use.",
   },
   {
     image: designParkHero,
     title: "DesignPark",
     slug: "design-park",
     year: "2024",
-    text: "A holistic systems-design project imagining DesignPark: a mobile makerspace in a shipping container that brings digital fabrication tools directly to primary schools, paired with a booking platform and ready-made curriculum.",
+    text: "A systems-design project about DesignPark, a mobile makerspace in a shipping container that brings 3D printers and laser cutters directly to primary schools, together with a booking platform and a ready-made curriculum.",
   },
   {
     image: urbanBloomImage.url,
     title: "Urban Bloom",
     slug: "urban-bloom",
     year: "2023",
-    text: "A bachelor thesis exploring how design can turn neglected urban plots into biodiversity. Urban Bloom is a mobile platform that lets citizens claim and green disused spaces, in collaboration with Copenhagen Municipality.",
+    text: "My bachelor thesis on how design can turn neglected urban plots into biodiversity. Urban Bloom is a mobile platform where citizens can claim and green disused spaces, made in collaboration with Copenhagen Municipality.",
   },
   {
     image: legoClubHero,
-    title: "LEGO Element 5083 — The Club",
+    title: "LEGO Element 5083: The Club",
     slug: "the-club",
     year: "2022",
-    text: "During an internship on LEGO's element design team, I designed Orion's club — element 5083 — for Collectible Minifigures Series 26, taking it from concept sculpt through to a manufacturable, mould-ready part.",
+    text: "During my internship on LEGO's element design team, I designed Orion's club, element 5083, for Collectible Minifigures Series 26. Took it all the way from the first sculpt to a part that could actually be moulded.",
   },
 ];
 
@@ -72,7 +72,7 @@ function WorkPage() {
       </header>
 
       <section className="work-intro" aria-labelledby="work-heading">
-        <p className="about-kicker">Selected work · 2022—2026</p>
+        <p className="about-kicker">Selected work · 2022-2026</p>
         <h1 id="work-heading">Selected work</h1>
       </section>
 
