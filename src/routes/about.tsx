@@ -74,7 +74,7 @@ function AboutPage() {
         </figure>
         <h1 id="about-heading">I design products, systems and collaborations for complex challenges.... and also smaller problems</h1>
         <p className="about-lead">Fresh out of DTU I come with with a masters degree in Design &amp; Innovation,  more than two years of experience from the think tank ATV,  and experience with product development, bringing projects from early stage concepting all the way to production ready products.</p>
-        <Link to="/work" className="work-read-more about-lead-cta">Selected work <span aria-hidden="true">↗</span></Link>
+        <Link to="/work" className="work-read-more about-lead-cta">Selected work</Link>
         <div className="about-contact">
           <a href="mailto:ebbeab@hotmail.com">ebbeab@hotmail.com</a>
           <a href="tel:+4521496615">+45 21 49 66 15</a>
@@ -113,7 +113,7 @@ function AboutPage() {
         <div><ul>{skills.map((skill) => <li key={skill}>{skill}</li>)}</ul><p className="tools-label">Tools</p><p className="tools-list">{tools.join(" · ")}</p></div>
       </section>
 
-      <footer className="about-footer"><p>Selected works · 2026</p><Link to="/work">Explore the work <span aria-hidden="true">↗</span></Link></footer>
+      <footer className="about-footer"><p>Selected works · 2026</p><Link to="/work">Explore the work</Link></footer>
     </main>
   );
 }

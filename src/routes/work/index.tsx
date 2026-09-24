@@ -94,7 +94,7 @@ function WorkPage() {
               <p className="work-index">{String(index + 1).padStart(2, "0")} · {project.year}</p>
               <h2>{project.title}</h2>
               <p>{project.text}</p>
-              <Link to="/work/$projectId" params={{ projectId: project.slug }} className="work-read-more" aria-label={`Read more about ${project.title}`}>Read more <span aria-hidden="true">↗</span></Link>
+              <Link to="/work/$projectId" params={{ projectId: project.slug }} className="work-read-more" aria-label={`Read more about ${project.title}`}>Read more</Link>
             </div>
           </article>
         ))}
@@ -102,7 +102,7 @@ function WorkPage() {
 
       <footer className="about-footer">
         <p>Get in touch · 2026</p>
-        <a href="mailto:ebbeab@hotmail.com">ebbeab@hotmail.com <span aria-hidden="true">↗</span></a>
+        <a href="mailto:ebbeab@hotmail.com">ebbeab@hotmail.com</a>
       </footer>
     </main>
   );

@@ -173,7 +173,7 @@ function ProjectPage() {
 
       <footer className="about-footer">
         <p>Next project</p>
-        <Link to="/work/$projectId" params={{ projectId: nextId }}>{projects[nextId]!.title} <span aria-hidden="true">↗</span></Link>
+        <Link to="/work/$projectId" params={{ projectId: nextId }}>{projects[nextId]!.title}</Link>
       </footer>
     </main>
   );
