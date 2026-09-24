@@ -26,14 +26,14 @@ const projects = [
     title: "Sustainable Metal Additive Manufacturing",
     slug: "metal-additive-manufacturing",
     year: "2026",
-    text: "My master's thesis on the environmental footprint of metal 3D printed tooling for injection moulding, done in collaboration with an industrial manufacturing partner.",
+    text: "My master's thesis on the environmental footprint of metal 3D printed tooling for injection moulding, done in collaboration with LEGO.",
   },
   {
     image: missionLabCover,
     title: "Mission Lab Playbook",
     slug: "mission-lab-playbook",
     year: "2025",
-    text: "A working document I made for ATV, the Danish Academy of Technical Sciences, about mission-oriented innovation. I took input from experts in user involvement, futures studies, design and climate IT and turned it into a playbook that's quick to read and actually use.",
+    text: "A working document I made for ATV, the Danish Academy of Technical Sciences, about mission-oriented innovation. I took input from experts in user involvement, futures studies, design and climate IT and turned it into a playbook that's quick to read and actually use for Mission Lab Participants.",
   },
   {
     image: designParkHero,
@@ -47,14 +47,14 @@ const projects = [
     title: "Urban Bloom",
     slug: "urban-bloom",
     year: "2023",
-    text: "My bachelor thesis on how design can turn neglected urban plots into biodiversity. Urban Bloom is a mobile platform where citizens can claim and green disused spaces, made in collaboration with Copenhagen Municipality.",
+    text: "My bachelor thesis on how design can turn neglected urban plots into biodiversity. Urban Bloom is a mobile platform where citizens can claim and garden disused public spaces helping the municipality and giving citizens of Copenhagen Access to gardening",
   },
   {
     image: legoClubHero,
     title: "LEGO Element 5083: The Club",
     slug: "the-club",
     year: "2022",
-    text: "During my internship on LEGO's element design team, I designed Orion's club, element 5083, for Collectible Minifigures Series 26. Took it all the way from the first sculpt to a part that could actually be moulded.",
+    text: "During my internship on LEGO's element design team, I designed Orion's club, element 5083, for Collectible Minifigures Series 26. Took it all the way from the first sculpt to a part that could be moulded using injection moulding.",
   },
   {
     image: bigSunHero,
