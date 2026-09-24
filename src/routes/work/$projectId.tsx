@@ -35,12 +35,12 @@ const projects: Record<string, {
     image: missionLabCover,
     description: [
       "The Mission Lab Playbook is a working document about how ATV, the Danish Academy of Technical Sciences, works with mission-oriented innovation. I made it together with experts from a range of fields, including user involvement, futures studies, design and climate IT.",
-      "My job was to take all that expert knowledge and turn it into something simple and quick to read, for people who want to work more mission-oriented when they develop new technology.",
+      "My job was to take all that expert knowledge and turn it into something simple and quick to read, for people who want to work more mission-oriented when they develop new technology or new ways to use existing technology. \n\n\nThe playbook can be downloaded at: https://atv.dk/udgivelser-viden/mission-lab-playbook\n",
     ],
     learnings: [
-      "Turning expert knowledge into something practitioners can use is its own design problem. The hard part isn't gathering the input, it's deciding what to cut so the format stays quick to read without losing what makes it useful.",
-      "Working across fields as different as futures studies, design and climate IT meant finding a shared language and structure that didn't feel native to any of them, but was useful for all of them.",
-      "A playbook only works if people actually pick it up. Getting the content right mattered, but so did making it quick to scan and easy to use as a reference.",
+      "Turning expert knowledge into something practitioners can use is its own design problem. Deciding what to cut from the playbook without loosing valuable context is difficult.",
+      "Creating a document that can easily be changed by colleagues without graphical design skills is more important when creating a working document for a 4 year project.",
+      "A playbook only works if people actually pick it up. It should be scannable and the most important information should be front loaded",
     ],
     skills: ["Editorial & information design", "Content strategy", "Stakeholder collaboration", "Mission-oriented innovation", "Facilitation"],
   },
