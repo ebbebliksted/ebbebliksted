@@ -19,13 +19,13 @@ const projects: Record<string, {
     year: "2026",
     image: thesisCoverImage,
     description: [
-      "My thesis looks at how sustainable laser powder bed fusion (LPBF) actually is. It's a metal 3D printing process that's increasingly used to make injection moulding inserts with complex cooling channels inside them. Together with an industry partner's manufacturing team, I combined a review of existing research with a full life cycle assessment of a real production insert, to find out where its environmental impact actually comes from.",
-      "Based on the LCA I came up with three improvement scenarios: relocating post-processing, using different materials and lightweighting the part through topology optimisation. I tested how feasible each one was through interviews with the manufacturing team, weighing the environmental gains against cost and what's realistic to actually change in a factory.",
+      "My thesis looks at how sustainable laser powder bed fusion (LPBF) actually is. It's a metal 3D printing process that's increasingly used to make injection moulding inserts with complex cooling channels inside them. Together with LEGO's manufacturing team, we combined a review of existing research with a full life cycle assessment of a real production insert, to find out where its environmental impact actually comes from.",
+      "Based on the LCA I came up with three improvement scenarios. We tested how feasible each one was through interviews with the manufacturing team, weighing the environmental gains against cost and what's realistic to actually change in a factory.",
     ],
     learnings: [
-      "The printing step usually isn't the biggest contributor. Post-processing and the local energy mix can matter more for a part's footprint than the headline manufacturing technology does.",
+      "Mapping a complex production setup with multiple subcontractors, takes persistence and a lot of meetings and emails.",
       "A Life Cycle Assessment only matters if the team that has to act on it can actually use the recommendations.",
-      "Environmental improvements can work against each other. Reducing one impact category sometimes increases another.",
+      "There is a lot of value in communicating pro's and cons in a transparent and straightforward manner.",
     ],
     skills: ["Life Cycle Assessment", "Sustainability strategy", "Design Research Methodology", "Stakeholder interviews", "Industrial collaboration"],
   },
