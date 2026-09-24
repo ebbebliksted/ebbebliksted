@@ -138,14 +138,13 @@ function LandingPage() {
         ))}
       </div>
 
-      <Link to="/about" onClick={enterPortfolio} className="identity group" aria-label="Enter Ebbe Bliksted's portfolio">
-        <h1 className="sr-only">Ebbe Bliksted</h1>
-        <p className="sr-only">CAND.POLYT DESIGN &amp; INNOVATION</p>
-        <span className="enter-label" aria-hidden="true">Enter portfolio <span>↗</span></span>
-      </Link>
-
       <p className="edition">Selected works · 2026</p>
       <p className="location">Copenhagen, DK</p>
+
+      <Link to="/about" onClick={enterPortfolio} className="identity" aria-label="Enter Ebbe Bliksted's portfolio">
+        <h1 className="sr-only">Ebbe Bliksted</h1>
+        <p className="sr-only">CAND.POLYT DESIGN &amp; INNOVATION</p>
+      </Link>
     </main>
   );
 }

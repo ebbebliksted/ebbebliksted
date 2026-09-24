@@ -181,7 +181,7 @@
 .landing-stage.is-exiting .fragment { animation: fragment-fly-out .9s cubic-bezier(.62,.02,.75,.45) forwards; }
 .landing-stage.is-exiting .identity { z-index: 6; transform: translate(calc(-50vw + 8.5rem), calc(-50vh + 5rem)) scale(.34); pointer-events: none; }
 .landing-stage.is-exiting .identity p { opacity: 1; }
-.landing-stage.is-exiting .enter-label, .landing-stage.is-exiting .edition, .landing-stage.is-exiting .location { opacity: 0; }
+.landing-stage.is-exiting .edition, .landing-stage.is-exiting .location { opacity: 0; }
 
 @keyframes fragment-fly-out {
   0% { opacity: 1; translate: var(--mouse-x, 0) var(--mouse-y, 0); scale: 1; }
@@ -206,12 +206,9 @@
 .fragment-phone { --tilt: 3deg; bottom: 4%; left: 27%; width: clamp(4.5rem, 6.5vw, 7rem); aspect-ratio: .71; }
 .fragment-thesis { --tilt: -2deg; bottom: 2%; left: 60%; width: clamp(4.5rem, 7vw, 8rem); aspect-ratio: .77; }
 
-.identity { display: block; padding: 3rem; text-align: center; text-decoration: none; color: var(--foreground); transition: transform .9s cubic-bezier(.76,0,.24,1); }
+.identity { position: absolute; inset: 0; z-index: 2; display: block; text-decoration: none; color: var(--foreground); transition: transform .9s cubic-bezier(.76,0,.24,1); }
 .identity h1 { margin: 0; font-family: var(--font-serif); font-size: clamp(3.6rem, 7vw, 7rem); font-weight: 400; line-height: .95; letter-spacing: 0; transition: color .45s ease; }
 .identity p { margin: 1rem 0 0; font-size: clamp(.68rem, 1vw, .82rem); font-weight: 500; text-transform: uppercase; letter-spacing: .18em; color: var(--muted-foreground); transition: color .45s ease; }
-.identity:hover h1, .identity:hover p { color: var(--primary); }
-.enter-label { display: inline-flex; align-items: center; gap: .6rem; margin-top: 2rem; font-size: .65rem; font-weight: 500; text-transform: uppercase; letter-spacing: .14em; opacity: 0; transform: translateY(.6rem); transition: opacity .35s ease, transform .35s ease; }
-.identity:hover .enter-label, .identity:focus-visible .enter-label { opacity: 1; transform: translateY(0); }
 .edition, .location { position: absolute; margin: 0; font-size: .6rem; font-weight: 500; text-transform: uppercase; letter-spacing: .18em; color: var(--muted-foreground); }
 .edition { top: 2rem; left: 2rem; writing-mode: vertical-rl; transform: rotate(180deg); }
 .location { right: 2rem; bottom: 2rem; }
@@ -327,5 +324,5 @@
 
 @media (prefers-reduced-motion: reduce) {
   .fragment { opacity: 1; translate: none; animation: none; transform: rotate(var(--tilt, 0deg)); }
-  .enter-label, .identity h1, .identity p { transition: none; }
+  .identity h1, .identity p { transition: none; }
 }
