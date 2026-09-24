@@ -173,7 +173,7 @@
   place-items: center;
   overflow: hidden;
   isolation: isolate;
-  background: var(--background) url("./assets/landing-background.jpg") center / cover no-repeat;
+  background: var(--background) url("./assets/landing-background.jpg") center / contain no-repeat;
 }
 
 .landing-stage::after { content: ""; position: absolute; inset: 0; z-index: 5; pointer-events: none; background: var(--background); opacity: 0; transition: opacity .35s ease .68s; }
