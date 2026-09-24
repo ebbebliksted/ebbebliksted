@@ -13,6 +13,7 @@ import openBox from "@/assets/open_box.jpg.asset.json";
 import orion from "@/assets/Orion.jpg.asset.json";
 import packing from "@/assets/PACKING.png.asset.json";
 import picture from "@/assets/Picture3.jpg.asset.json";
+import signatureName from "@/assets/signature-name.png";
 import thesisCover from "@/assets/thesis-cover.jpg";
 
 export const Route = createFileRoute("/")({
@@ -203,6 +204,7 @@ function LandingPage() {
 
       <p className="edition">Selected works · 2026</p>
       <p className="location">Copenhagen, DK</p>
+      <img src={signatureName} alt="" className="signature" draggable={false} />
     </main>
   );
 }
