@@ -50,7 +50,7 @@ const experience = [
   },
 ];
 
-const skills = ["Design thinking", "Workshop facilitation", "LCA & ESG reporting", "Product development", "Social innovation", "Cross-disciplinary collaboration", "Partnership development", "Project management"];
+const skills = ["Design thinking", "Workshop facilitation", "LCA & ESG reporting", "Product development", "Social innovation", "Cross-disciplinary collaboration", "Partnership development", "Project management", "3D modelling"];
 const tools = ["Figma", "Excel", "SimaPro", "Creo", "Fusion 360"];
 
 function AboutPage() {
