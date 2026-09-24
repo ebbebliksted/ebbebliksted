@@ -95,12 +95,12 @@ const projects: Record<string, {
     image: bigSunHero,
     description: [
       "Big Sun was a project for the course Design of Mechatronic Systems. The task was to design an IoT product that could help people adjust to life after the pandemic, and we decided to focus on reminding people to use sunscreen now that festivals were finally back.",
-      "The result is a pole that measures and shows the UV level on the spot. People can also sign up to get a notification for when they should reapply sunscreen, and we built an app that lets you check the UV index the pole is measuring from anywhere. The pole itself is a mix of 3D-printed and laser-cut parts, sensors and motors. It was exhibited in the DTU tent at Roskilde Festival 2022.",
+      "The result is a pole that measures and shows the UV level on the spot. People can also sign up to get a notification for when they should apply sunscreen, and we built an app that lets you check the UV index the pole is measuring from anywhere. The pole itself is a mix of 3D-printed, laser-cut and traditonally built parts, sensors and motors. It was exhibited in the DTU tent at Roskilde Festival 2022.",
     ],
     learnings: [
-      "An IoT product like this is really three things that have to work together: the physical pole, the notification service and the app. Getting the hardware right wasn't enough on its own.",
-      "Designing for a festival crowd is different from designing for a lab. The pole had to survive being poked, pointed at and rained on all week, not just work once in a demo.",
-      "Mixing 3D-printed parts, laser-cut parts, sensors and motors in one build meant a lot of the actual work was in getting those pieces to fit and talk to each other, not just in the individual parts themselves.",
+      "Plan for unstable internet!.",
+      "Designing for a festival crowd.  The pole had to survive being poked, pointed at and rained on all week.",
+      "Make it more interactive. A large pole that displays the UV index is more fun if the UV changes during the hours it is on display.",
     ],
     skills: ["IoT prototyping", "3D printing & laser cutting", "Sensor & motor integration", "App design", "Mechatronic systems"],
   },
