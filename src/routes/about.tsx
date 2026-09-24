@@ -25,21 +25,21 @@ const experience = [
     role: "Student Assistant",
     place: "ATV, Danish Academy of Technical Sciences",
     logo: atvLogo,
-    text: "I develop and run Mission Labs where people from universities, companies and public authorities work on the same problem together. I also turn what comes out of it into analyses, reports and recommendations that people can actually use.",
+    text: "During my time at ATV i developed and facilitated Mission Labs, which is cross disciplinary Mission oriented innovation programmes. I got the chance to work with 250+ participants from Universities, private companies and public authorities. The Mission Labs ended up as reports and decision support presented to decision makers in companies, in public authorities at both the national and regional level.",
   },
   {
     years: "2023",
     role: "Teaching Assistant",
     place: "Technical University of Denmark",
     logo: dtuLogo,
-    text: "Helped students through the course Design Thinking & Sociotechnical Systems and guided their design projects.",
+    text: "I Helped students through the course Design Thinking & Sociotechnical Systems and guided their design projects. The students worked on designing solutions to a societal problem through the Social Implication Design method. ",
   },
   {
     years: "2022",
     role: "Element Designer",
     place: "The LEGO Group",
     logo: legoLogo,
-    text: "Worked on new LEGO elements from the first sketches all the way to engineering handover, and learned a lot about what it actually takes to get a concept ready for production.",
+    text: "At LEGO i worked on new LEGO elements from the first sketches through 3d modelling all the way to engineering handover.  2 elements ended up in production for the Collectible minifigures line",
   },
   {
     years: "2022",
@@ -51,7 +51,7 @@ const experience = [
 ];
 
 const skills = ["Design thinking", "Workshop facilitation", "LCA & ESG reporting", "Product development", "Social innovation", "Cross-disciplinary collaboration", "Partnership development", "Project management", "3D modelling"];
-const tools = ["Figma", "Excel", "SimaPro", "Creo", "Fusion 360"];
+const tools = ["Figma", "Excel", "SimaPro", "Creo", "Fusion 360  ", "  Rhino  ", "  Synera  ", "  Rstudio"];
 
 function AboutPage() {
   return (
@@ -73,7 +73,7 @@ function AboutPage() {
           <img src={portraitAsset.url} alt="Portrait of Ebbe Bliksted" width={800} height={1000} />
         </figure>
         <h1 id="about-heading">I design products, systems and collaborations for complex problems.</h1>
-        <p className="about-lead">I'm fresh out of DTU with a degree in Design & Innovation, and more than two years of experience from the think tank ATV, where my job has been to bring very different people together and help them find real solutions to big societal challenges. I like design thinking, product development and understanding what people actually need, and I'm still very much in the mood to keep learning.</p>
+        <p className="about-lead">Fresh out of DTU I come with with a masters degree in Design &amp; Innovation,  more than two years of experience from the think tank ATV, where my job has been to bring different people together and help them find real solutions to societal challenges through Mission oriented innovation and experience with product development, bringing projects from early stage concepting all the way to production ready products.</p>
         <div className="about-contact">
           <a href="mailto:ebbeab@hotmail.com">ebbeab@hotmail.com</a>
           <a href="tel:+4521496615">+45 21 49 66 15</a>
