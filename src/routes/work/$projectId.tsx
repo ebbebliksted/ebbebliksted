@@ -50,12 +50,12 @@ const projects: Record<string, {
     image: designParkHero,
     description: [
       "DesignPark looks at how primary schools without their own makerspace could still get hands-on access to digital fabrication. During the project my team and i moved between the engineering, system and product levels, combining desk research, 17 stakeholder interviews and co-creation workshops at two schools. The goal was to understand why donated 3D printers and laser cutters so often just sit unused. Turns out schools have the equipment, but not the maintenance knowledge, curriculum or time to actually use it.",
-      "The result is a 20-foot container fitted out as a mobile makerspace. Schools book a visit, a facilitator and a ready-made STEM curriculum through a website, while DesignPark keeps ownership of the machines and stays responsible for them. We tested the concept through a real co-creation workshop at a primary school, a website prototype, a business model canvas and a cost and market analysis.\n\n\nThe project moved on as the start up Gnist Education",
+      "The result is a 20-foot container fitted out as a mobile makerspace. Schools book a visit, a facilitator and a ready-made STEM curriculum through a website, while DesignPark keeps ownership of the machines and stays responsible for them. We tested the concept through a real co-creation workshop at a primary school, a website prototype, a business model canvas and a cost and market analysis. \n\n\n The project moved on as the start up Gnist Education",
     ],
     learnings: [
-      "A good product isn't enough on its own. The real barrier between schools and digital fabrication was organisational, things like maintenance, curriculum and teacher confidence, not physical space or budget.",
+      "The real barrier between schools and digital fabrication was organisational, things like maintenance, curriculum and teacher confidence, not physical space or budget.",
       "Letting teachers co-design without also holding onto a clear point of view just gives you a compromise, not a good makerspace. One interviewee put it well: 'if teachers get to design the makerspace, it will be a bad makerspace.' That line stuck with the whole team.",
-      "With eight people and 17 interviews, structured project management mattered just as much as the design work. Momentum only picked up once we made roles and delegation explicit.",
+      "With eight team members and even more external stakeholders, structured project management mattered just as much as the design work. ",
     ],
     skills: ["Systems-level design (N-model)", "Stakeholder research & interviews", "Co-creation workshops", "Product-service system design", "CAD & prototyping", "Business modelling"],
   },
