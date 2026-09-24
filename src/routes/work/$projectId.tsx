@@ -64,13 +64,13 @@ const projects: Record<string, {
     year: "2023",
     image: urbanBloomImage.url,
     description: [
-      "Urban Bloom looks at how design can strengthen the bond between city dwellers and the ecosystems around them. I used the Social Implication Design method to research urban ecology, behavioural psychology and municipal systems, to understand what actually stops Copenhageners from engaging with biodiversity close to home.",
-      "The result is a mobile platform that gives citizens the legal right and the practical means to turn neglected pavement, curb strips and traffic islands into small, biodiversity-friendly plantings. I developed it in dialogue with Copenhagen Municipality and validated it through expert interviews and a narrative-based study.",
+      "Urban Bloom looks at how design can strengthen the bond between urban citizens and the ecosystems around them. We used the Social Implication Design method to research urban ecology, behavioural psychology and municipal systems, to understand what actually stops Copenhageners from engaging with biodiversity close to home.",
+      "The result is a mobile platform that gives citizens the legal right and the practical means to turn neglected pavement, curb strips and traffic islands into small, biodiversity-friendly plantings. A prototype was developed in Figma and presented to employees in the municipality and tested with potential users.",
     ],
     learnings: [
-      "Designing for behaviour change means designing the whole system around it, permissions, seed access, municipal process, not just the app.",
-      "Grounding the concept in stakeholder interviews and literature before I started ideating kept the platform's rules realistic instead of just aspirational.",
-      "A concept this civic needs a lot of iteration. Validation surfaced real feedback that the current prototype doesn't fully address yet.",
+      "Designing for behaviour change means designing the whole system around it.",
+      "Grounding the concept in stakeholder interviews and literature before starting  ideation kept the platform's rules realistic instead of just aspirational.",
+      "Making a change this big to urban spaces and the way we interact with them needs a lot of stakeholder management.",
     ],
     skills: ["Social Implication Design", "Stakeholder research", "Service design", "UX/UI prototyping", "Workshop facilitation"],
   },
