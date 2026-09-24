@@ -4,6 +4,7 @@ import thesisCoverImage from "@/assets/speciale-forside.jpg";
 import designParkHero from "@/assets/design-park-hero.png";
 import legoClubHero from "@/assets/lego-club-5083.jpg";
 import missionLabCover from "@/assets/mission-lab-playbook-cover.png";
+import bigSunHero from "@/assets/big-sun-uv-tower.webp";
 
 export const Route = createFileRoute("/work/")({
   head: () => ({
@@ -54,6 +55,13 @@ const projects = [
     slug: "the-club",
     year: "2022",
     text: "During my internship on LEGO's element design team, I designed Orion's club, element 5083, for Collectible Minifigures Series 26. Took it all the way from the first sculpt to a part that could actually be moulded.",
+  },
+  {
+    image: bigSunHero,
+    title: "Big Sun Project",
+    slug: "big-sun-project",
+    year: "2022",
+    text: "An IoT pole built for the course Design of Mechatronic Systems that measures and shows UV levels, reminding festival-goers to put sunscreen on. Exhibited in the DTU tent at Roskilde Festival 2022.",
   },
 ];
 
