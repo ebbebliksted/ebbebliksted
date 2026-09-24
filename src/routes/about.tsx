@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import portraitAsset from "@/assets/profilbillede.jpg.asset.json";
 import atvLogo from "@/assets/logos/atv.svg";
 import dtuLogo from "@/assets/logos/dtu.svg";
@@ -72,8 +72,8 @@ function AboutPage() {
         <figure className="about-portrait">
           <img src={portraitAsset.url} alt="Portrait of Ebbe Bliksted" width={800} height={1000} />
         </figure>
-        <h1 id="about-heading">I design products, systems and collaborations for complex problems.</h1>
-        <p className="about-lead">Fresh out of DTU I come with with a masters degree in Design &amp; Innovation,  more than two years of experience from the think tank ATV, where my job has been to bring different people together and help them find real solutions to societal challenges through Mission oriented innovation and experience with product development, bringing projects from early stage concepting all the way to production ready products.</p>
+        <h1 id="about-heading">I design products, systems and collaborations for complex challenges.... and also smaller problems</h1>
+        <p className="about-lead">Fresh out of DTU I come with with a masters degree in Design &amp; Innovation,  more than two years of experience from the think tank ATV,  and experience with product development, bringing projects from early stage concepting all the way to production ready products.</p>
         <Link to="/work" className="work-read-more about-lead-cta">Selected work <span aria-hidden="true">↗</span></Link>
         <div className="about-contact">
           <a href="mailto:ebbeab@hotmail.com">ebbeab@hotmail.com</a>
