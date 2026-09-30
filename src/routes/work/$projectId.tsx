@@ -19,6 +19,7 @@ const projects: Record<string, {
   learnings: string[];
   skills: string[];
   gallery?: { src: string; alt: string }[];
+  download?: { text: string; href: string; label: string };
 }> = {
   "metal-additive-manufacturing": {
     title: "Sustainable Metal Additive Manufacturing",
@@ -172,6 +173,12 @@ function ProjectPage() {
         <div className="about-section-label"><span>01</span><h2 id="project-about-heading">About the project</h2></div>
         <div className="project-body">
           {project.description.map((paragraph) => <p key={paragraph.slice(0, 24)}>{paragraph}</p>)}
+          {project.download && (
+            <p className="project-download">
+              {project.download.text}{" "}
+              <a href={project.download.href} target="_blank" rel="noopener noreferrer">{project.download.label}</a>
+            </p>
+          )}
         </div>
       </section>
 
