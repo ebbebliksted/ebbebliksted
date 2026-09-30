@@ -7,6 +7,7 @@ import designParkPlatform from "@/assets/design-park-platform.png";
 import designParkClassroom from "@/assets/design-park-classroom.png";
 import legoClubHero from "@/assets/lego-club-5083.jpg";
 import missionLabCover from "@/assets/mission-lab-playbook-cover.png";
+import missionLabFigure from "@/assets/mission-lab-figure.png";
 import bigSunHero from "@/assets/big-sun-uv-tower.webp";
 import signatureNameTitle from "@/assets/signature-name-title.png";
 
@@ -48,6 +49,9 @@ const projects: Record<string, {
       "A playbook only works if people actually pick it up. It should be scannable and the most important information should be front loaded",
     ],
     skills: ["Editorial & information design", "Content strategy", "Stakeholder collaboration", "Mission-oriented innovation", "Facilitation"],
+    gallery: [
+      { src: missionLabFigure, alt: "A spread from the playbook contrasting traditional investment logic with mission-oriented logic" },
+    ],
   },
   "design-park": {
     title: "DesignPark",
