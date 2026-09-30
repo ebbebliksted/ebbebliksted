@@ -2,6 +2,9 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import urbanBloomImage from "@/assets/urban-bloom-phone.jpg.asset.json";
 import thesisCoverImage from "@/assets/speciale-forside.jpg";
 import designParkHero from "@/assets/design-park-hero.png";
+import designParkWorkshop from "@/assets/design-park-workshop.png";
+import designParkPlatform from "@/assets/design-park-platform.png";
+import designParkClassroom from "@/assets/design-park-classroom.png";
 import legoClubHero from "@/assets/lego-club-5083.jpg";
 import missionLabCover from "@/assets/mission-lab-playbook-cover.png";
 import bigSunHero from "@/assets/big-sun-uv-tower.webp";
@@ -14,6 +17,7 @@ const projects: Record<string, {
   description: string[];
   learnings: string[];
   skills: string[];
+  gallery?: { src: string; alt: string }[];
 }> = {
   "metal-additive-manufacturing": {
     title: "Sustainable Metal Additive Manufacturing",
@@ -59,6 +63,11 @@ const projects: Record<string, {
       "With eight team members and even more external stakeholders, structured project management mattered just as much as the design work. ",
     ],
     skills: ["Systems-level design (N-model)", "Stakeholder research & interviews", "Co-creation workshops", "Product-service system design", "CAD & prototyping", "Business modelling"],
+    gallery: [
+      { src: designParkWorkshop, alt: "The mobile makerspace prototype being built" },
+      { src: designParkPlatform, alt: "The DesignPark booking platform for schools" },
+      { src: designParkClassroom, alt: "A co-creation workshop with students at Hellerup Skole" },
+    ],
   },
   "urban-bloom": {
     title: "Urban Bloom",
@@ -170,6 +179,19 @@ function ProjectPage() {
           </ul>
         </div>
       </section>
+
+      {project.gallery && (
+        <section className="about-section" aria-labelledby="project-gallery-heading">
+          <div className="about-section-label"><span>03</span><h2 id="project-gallery-heading">Gallery</h2></div>
+          <div className="project-gallery">
+            {project.gallery.map((item) => (
+              <figure key={item.src}>
+                <img src={item.src} alt={item.alt} loading="lazy" />
+              </figure>
+            ))}
+          </div>
+        </section>
+      )}
 
       <footer className="about-footer">
         <p>Next project</p>
