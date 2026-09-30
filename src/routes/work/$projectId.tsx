@@ -60,7 +60,7 @@ const projects: Record<string, {
     learnings: [
       "The real barrier between schools and digital fabrication was organisational, things like maintenance, curriculum and teacher confidence, not physical space or budget.",
       "Co-design with Teachers and students was exceptionally valuable",
-      "With eight team members and even more external stakeholders, structured project management mattered just as much as the design work. ",
+      "With eight team members and even more external stakeholders, structured project management mattered.",
     ],
     skills: ["Systems-level design (N-model)", "Stakeholder research & interviews", "Co-creation workshops", "Product-service system design", "CAD & prototyping", "Business modelling"],
     gallery: [
