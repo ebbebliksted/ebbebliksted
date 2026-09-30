@@ -12,6 +12,9 @@ import bigSunHero from "@/assets/big-sun-uv-tower.webp";
 import mobiwagonHero from "@/assets/mobiwagon-hero.png";
 import mobiwagonScenario from "@/assets/mobiwagon-scenario.png";
 import mobiwagonDetails from "@/assets/mobiwagon-details.png";
+import mobiwagonTiltedRender from "@/assets/mobiwagon-tilted-render.png";
+import mobiwagonSketch from "@/assets/mobiwagon-sketch.png";
+import mobiwagonRemoteSketch from "@/assets/mobiwagon-remote-sketch.png";
 import signatureNameTitle from "@/assets/signature-name-title.png";
 
 const projects: Record<string, {
@@ -22,6 +25,7 @@ const projects: Record<string, {
   learnings: string[];
   skills: string[];
   gallery?: { src: string; alt: string }[];
+  galleryLayout?: "feature";
   download?: { text: string; href: string; label: string };
 }> = {
   "metal-additive-manufacturing": {
@@ -141,8 +145,12 @@ const projects: Record<string, {
       "Talking to the people who'd actually be pushing this thing around a construction site every day shaped the concept more than any spec sheet did.",
     ],
     skills: ["Product design", "CAD & mechanism design", "User research", "Ergonomics", "Concept development"],
+    galleryLayout: "feature",
     gallery: [
+      { src: mobiwagonTiltedRender, alt: "MOBIWAGON with its tiltable bed angled, ready to unload a plasterboard" },
       { src: mobiwagonScenario, alt: "The usage scenario for MOBIWAGON, showing a mover loading, driving through a door and unloading plasterboards solo" },
+      { src: mobiwagonSketch, alt: "An early concept sketch of the tiltable wagon and its wireless remote" },
+      { src: mobiwagonRemoteSketch, alt: "Sketches exploring the shape and button layout of the ergonomic remote control" },
       { src: mobiwagonDetails, alt: "Detail renders of MOBIWAGON loaded with a board, passing through a doorway and navigating between plasterboard panels" },
     ],
   },
@@ -221,7 +229,7 @@ function ProjectPage() {
       {project.gallery && (
         <section className="about-section" aria-labelledby="project-gallery-heading">
           <div className="about-section-label"><span>03</span><h2 id="project-gallery-heading">Gallery</h2></div>
-          <div className="project-gallery">
+          <div className={`project-gallery${project.galleryLayout === "feature" ? " project-gallery--feature" : ""}`}>
             {project.gallery.map((item) => (
               <figure key={item.src}>
                 <img src={item.src} alt={item.alt} loading="lazy" />
