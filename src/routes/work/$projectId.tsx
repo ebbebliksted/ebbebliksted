@@ -18,6 +18,7 @@ const projects: Record<string, {
   learnings: string[];
   skills: string[];
   gallery?: { src: string; alt: string }[];
+  download?: { text: string; href: string; label: string };
 }> = {
   "metal-additive-manufacturing": {
     title: "Sustainable Metal Additive Manufacturing",
