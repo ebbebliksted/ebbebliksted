@@ -19,6 +19,7 @@ const projects: Record<string, {
   learnings: string[];
   skills: string[];
   gallery?: { src: string; alt: string }[];
+  download?: { text: string; href: string; label: string };
 }> = {
   "metal-additive-manufacturing": {
     title: "Sustainable Metal Additive Manufacturing",
@@ -41,8 +42,13 @@ const projects: Record<string, {
     image: missionLabCover,
     description: [
       "The Mission Lab Playbook is a working document about how ATV, the Danish Academy of Technical Sciences, works with mission-oriented innovation. I made it together with experts from a range of fields, including user involvement, futures studies, design and climate IT.",
-      "My job was to take all that expert knowledge and turn it into something simple and quick to read, for people who want to work more mission-oriented when they develop new technology or new ways to use existing technology.  \n\n\nThe playbook can be downloaded at: https://atv.dk/udgivelser-viden/mission-lab-playbook",
+      "My job was to take all that expert knowledge and turn it into something simple and quick to read, for people who want to work more mission-oriented when they develop new technology or new ways to use existing technology.",
     ],
+    download: {
+      text: "The playbook can be downloaded at:",
+      href: "https://atv.dk/udgivelser-viden/mission-lab-playbook",
+      label: "atv.dk/udgivelser-viden/mission-lab-playbook",
+    },
     learnings: [
       "Turning expert knowledge into something practitioners can use is its own design problem. Deciding what to cut from the playbook without loosing valuable context is difficult.",
       "Creating a document that can easily be changed by colleagues without graphical design skills is more important when creating a working document for a 4 year project.",
@@ -172,6 +178,12 @@ function ProjectPage() {
         <div className="about-section-label"><span>01</span><h2 id="project-about-heading">About the project</h2></div>
         <div className="project-body">
           {project.description.map((paragraph) => <p key={paragraph.slice(0, 24)}>{paragraph}</p>)}
+          {project.download && (
+            <p className="project-download">
+              {project.download.text}{" "}
+              <a href={project.download.href} target="_blank" rel="noopener noreferrer">{project.download.label}</a>
+            </p>
+          )}
         </div>
       </section>
 
