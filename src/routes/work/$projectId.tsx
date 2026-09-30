@@ -48,7 +48,6 @@ const projects: Record<string, {
       href: "https://atv.dk/udgivelser-viden/mission-lab-playbook",
       label: "atv.dk/udgivelser-viden/mission-lab-playbook",
     },
-    ],
     learnings: [
       "Turning expert knowledge into something practitioners can use is its own design problem. Deciding what to cut from the playbook without loosing valuable context is difficult.",
       "Creating a document that can easily be changed by colleagues without graphical design skills is more important when creating a working document for a 4 year project.",
