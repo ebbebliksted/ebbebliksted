@@ -341,3 +341,16 @@
   .fragment { opacity: 1; translate: none; animation: none; transform: rotate(var(--tilt, 0deg)); }
   .identity h1, .identity p { transition: none; }
 }
+
+.project-download {
+  margin-top: 2.5rem;
+}
+
+.project-download a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.project-download a:hover {
+  opacity: 0.6;
+}
