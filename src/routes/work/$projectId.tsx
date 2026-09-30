@@ -140,9 +140,9 @@ const projects: Record<string, {
       "The vision was a wagon a single mover could load, drive through a standard door, tilt and unload without ever having to lift a board by hand. The final concept, MOBIWAGON, has a tiltable bed, a new wheel system with rollers for the final unload, mechanical arms with extension rods to steady the load, and a wireless remote control so the mover can steer the wagon through the doorway instead of pushing it. It measures 1668 x 749 x 572mm and is priced to sit well below the competition, around 104.000 kr against competitors closer to double that.",
     ],
     learnings: [
-      "The real constraint wasn't the wagon, it was the doorway. Designing around a fixed obstacle you can't change forces you to solve the problem somewhere else in the system.",
-      "A remote control still needs careful ergonomics. We added a dead-man's switch and shaped it so it's comfortable to hold and hard to activate by mistake.",
-      "Talking to the people who'd actually be pushing this thing around a construction site every day shaped the concept more than any spec sheet did.",
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem ip",
     ],
     skills: ["Product design", "CAD & mechanism design", "User research", "Ergonomics", "Concept development"],
     galleryLayout: "feature",
