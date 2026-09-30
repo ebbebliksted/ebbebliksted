@@ -9,6 +9,9 @@ import legoClubHero from "@/assets/lego-club-5083.jpg";
 import missionLabCover from "@/assets/mission-lab-playbook-cover.png";
 import missionLabFigure from "@/assets/mission-lab-figure.png";
 import bigSunHero from "@/assets/big-sun-uv-tower.webp";
+import mobiwagonHero from "@/assets/mobiwagon-hero.png";
+import mobiwagonScenario from "@/assets/mobiwagon-scenario.png";
+import mobiwagonDetails from "@/assets/mobiwagon-details.png";
 import signatureNameTitle from "@/assets/signature-name-title.png";
 
 const projects: Record<string, {
@@ -117,6 +120,25 @@ const projects: Record<string, {
       "Make it more interactive. A large pole that displays the UV index is more fun if the UV changes during the hours it is on display.",
     ],
     skills: ["IoT prototyping", "3D printing & laser cutting", "Sensor & motor integration", "App design", "Mechatronic systems"],
+  },
+  "plasterboard-wagon-redesign": {
+    title: "MOBIWAGON: Redesign of a Plasterboard Wagon",
+    year: "2021",
+    image: mobiwagonHero,
+    description: [
+      "This project was a redesign of Flexmover's wagon for moving plasterboards on construction sites. The boards are 90cm wide, but most interior doors are only 82cm, so movers were stuck taking boards off the wagon and carrying them through doorways by hand. That's heavy, awkward work, often done by one person alone on site.",
+      "The vision was a wagon a single mover could load, drive through a standard door, tilt and unload without ever having to lift a board by hand. The final concept, MOBIWAGON, has a tiltable bed, a new wheel system with rollers for the final unload, mechanical arms with extension rods to steady the load, and a wireless remote control so the mover can steer the wagon through the doorway instead of pushing it. It measures 1668 x 749 x 572mm and is priced to sit well below the competition, around 104.000 kr against competitors closer to double that.",
+    ],
+    learnings: [
+      "The real constraint wasn't the wagon, it was the doorway. Designing around a fixed obstacle you can't change forces you to solve the problem somewhere else in the system.",
+      "A remote control still needs careful ergonomics. We added a dead-man's switch and shaped it so it's comfortable to hold and hard to activate by mistake.",
+      "Talking to the people who'd actually be pushing this thing around a construction site every day shaped the concept more than any spec sheet did.",
+    ],
+    skills: ["Product design", "CAD & mechanism design", "User research", "Ergonomics", "Concept development"],
+    gallery: [
+      { src: mobiwagonScenario, alt: "The usage scenario for MOBIWAGON, showing a mover loading, driving through a door and unloading plasterboards solo" },
+      { src: mobiwagonDetails, alt: "Detail renders of MOBIWAGON loaded with a board, passing through a doorway and navigating between plasterboard panels" },
+    ],
   },
 };
 
