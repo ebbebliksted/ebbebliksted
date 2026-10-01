@@ -31,7 +31,7 @@ function ContactPage() {
       <section className="contact-intro" aria-labelledby="contact-heading">
         <p className="about-kicker">Contact · Copenhagen</p>
         <h1 id="contact-heading">Let's talk</h1>
-        <p className="about-lead">Reach out by email or give me a call, I'd love to hear from you.</p>
+        <p className="about-lead">Slide in my DM's.</p>
         <div className="contact-links">
           <a href="mailto:ebbeab@hotmail.com">ebbeab@hotmail.com</a>
           <a href="tel:+4521496615">+45 21 49 66 15</a>
