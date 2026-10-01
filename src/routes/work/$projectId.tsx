@@ -139,9 +139,9 @@ const projects: Record<string, {
       "The vision was a wagon a single mover could load, drive through a standard door, tilt and unload without ever having to lift a board by hand. The final concept, MOBIWAGON, has a tiltable bed, a new wheel system with rollers for the final unload, mechanical arms with extension rods to steady the load, and a wireless remote control so the mover can steer the wagon through the doorway instead of pushing it.\u00a0",
     ],
     learnings: [
-      "xxx",
-      "xxx",
-      "xxx",
+      "Quick simple cardboard prototypes works almost everytime",
+      "Planning what needs to be done in CAD instead of just starting saves a lot of time.",
+      "Henry Ford is bad at Asking Questions",
     ],
     skills: ["Product design", "CAD & mechanism design", "User research", "Ergonomics", "Concept development"],
     galleryLayout: "feature",
