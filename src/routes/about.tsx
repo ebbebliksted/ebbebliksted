@@ -68,7 +68,7 @@ function AboutPage() {
       </header>
 
       <section className="about-intro" aria-labelledby="about-heading">
-        <p className="about-kicker">About · Copenhagen</p>
+        <p className="about-kicker">About</p>
         <figure className="about-portrait">
           <img src={portraitAsset.url} alt="Portrait of Ebbe Bliksted" width={800} height={1000} />
         </figure>
