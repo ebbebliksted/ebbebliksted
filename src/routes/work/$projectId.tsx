@@ -57,7 +57,7 @@ const projects: Record<string, {
     },
     learnings: [
       "Turning expert knowledge into something practitioners can use is its own design problem. Deciding what to cut from the playbook without loosing valuable context is difficult.",
-      "Creating a document that can easily be changed by colleagues without graphical design skills is more important when creating a working document for a 4 year project.",
+      "Creating a document that can easily be changed by colleagues without graphical design skills is more important than creating some graphically perfect when creating a working document for a 4 year project.",
       "A playbook only works if people actually pick it up. It should be scannable and the most important information should be front loaded",
     ],
     skills: ["Editorial & information design", "Content strategy", "Stakeholder collaboration", "Mission-oriented innovation", "Facilitation"],
