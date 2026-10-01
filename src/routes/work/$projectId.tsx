@@ -9,6 +9,9 @@ import legoClubHero from "@/assets/lego-club-5083.jpg";
 import missionLabCover from "@/assets/mission-lab-playbook-cover.png";
 import missionLabFigure from "@/assets/mission-lab-figure.png";
 import bigSunHero from "@/assets/big-sun-uv-tower.webp";
+import bigSunElectronics from "@/assets/big-sun-electronics.jpg";
+import bigSunInstalled from "@/assets/big-sun-installed.jpg";
+import bigSunAppDemo from "@/assets/big-sun-app-demo.gif";
 import mobiwagonScenario from "@/assets/mobiwagon-scenario.png";
 import mobiwagonDetails from "@/assets/mobiwagon-details.png";
 import mobiwagonTiltedRender from "@/assets/mobiwagon-tilted-render.png";
@@ -129,6 +132,11 @@ const projects: Record<string, {
       "Make it more interactive. A large pole that displays the UV index is more fun if the UV changes during the hours it is on display.",
     ],
     skills: ["IoT prototyping", "3D printing & laser cutting", "Sensor & motor integration", "App design", "Mechatronic systems"],
+    gallery: [
+      { src: bigSunElectronics, alt: "The pole's electronics, wired up on a breadboard and prototyping board before final assembly" },
+      { src: bigSunInstalled, alt: "The finished UV pole installed and ready to go" },
+      { src: bigSunAppDemo, alt: "The companion app showing the live UV index on a phone" },
+    ],
   },
   "plasterboard-wagon-redesign": {
     title: "MOBIWAGON: Redesign of a Plasterboard Wagon",
