@@ -83,7 +83,7 @@ function WorkPage() {
         </Link>
         <nav aria-label="Portfolio navigation">
           <Link to="/about">About</Link>
-          <a href="mailto:ebbeab@hotmail.com">Contact</a>
+          <Link to="/contact">Contact</Link>
         </nav>
       </header>
 

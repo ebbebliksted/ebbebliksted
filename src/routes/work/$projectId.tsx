@@ -190,7 +190,7 @@ function ProjectPage() {
         </Link>
         <nav aria-label="Portfolio navigation">
           <Link to="/work">Selected work</Link>
-          <a href="mailto:ebbeab@hotmail.com">Contact</a>
+          <Link to="/contact">Contact</Link>
         </nav>
       </header>
 
