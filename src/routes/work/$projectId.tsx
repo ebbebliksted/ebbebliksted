@@ -9,7 +9,6 @@ import legoClubHero from "@/assets/lego-club-5083.jpg";
 import missionLabCover from "@/assets/mission-lab-playbook-cover.png";
 import missionLabFigure from "@/assets/mission-lab-figure.png";
 import bigSunHero from "@/assets/big-sun-uv-tower.webp";
-import mobiwagonHero from "@/assets/mobiwagon-hero.png";
 import mobiwagonScenario from "@/assets/mobiwagon-scenario.png";
 import mobiwagonDetails from "@/assets/mobiwagon-details.png";
 import mobiwagonTiltedRender from "@/assets/mobiwagon-tilted-render.png";
@@ -134,7 +133,7 @@ const projects: Record<string, {
   "plasterboard-wagon-redesign": {
     title: "MOBIWAGON: Redesign of a Plasterboard Wagon",
     year: "2021",
-    image: mobiwagonHero,
+    image: mobiwagonTiltedRender,
     description: [
       "This project was a redesign of Flexmover's wagon for moving plasterboards on construction sites. The boards are 90cm wide, but most interior doors are only 82cm, so movers were stuck taking boards off the wagon and carrying them through doorways by hand. That's heavy, awkward work, often done by one person alone on site.",
       "The vision was a wagon a single mover could load, drive through a standard door, tilt and unload without ever having to lift a board by hand. The final concept, MOBIWAGON, has a tiltable bed, a new wheel system with rollers for the final unload, mechanical arms with extension rods to steady the load, and a wireless remote control so the mover can steer the wagon through the doorway instead of pushing it. It measures 1668 x 749 x 572mm and is priced to sit well below the competition, around 104.000 kr against competitors closer to double that.",
@@ -147,7 +146,6 @@ const projects: Record<string, {
     skills: ["Product design", "CAD & mechanism design", "User research", "Ergonomics", "Concept development"],
     galleryLayout: "feature",
     gallery: [
-      { src: mobiwagonTiltedRender, alt: "MOBIWAGON with its tiltable bed angled, ready to unload a plasterboard" },
       { src: mobiwagonScenario, alt: "The usage scenario for MOBIWAGON, showing a mover loading, driving through a door and unloading plasterboards solo" },
       { src: mobiwagonSketch, alt: "An early concept sketch of the tiltable wagon and its wireless remote" },
       { src: mobiwagonRemoteSketch, alt: "Sketches exploring the shape and button layout of the ergonomic remote control" },

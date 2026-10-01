@@ -5,7 +5,7 @@ import designParkHero from "@/assets/design-park-hero.png";
 import legoClubHero from "@/assets/lego-club-5083.jpg";
 import missionLabCover from "@/assets/mission-lab-playbook-cover.png";
 import bigSunHero from "@/assets/big-sun-uv-tower.webp";
-import mobiwagonHero from "@/assets/mobiwagon-hero.png";
+import mobiwagonTiltedRender from "@/assets/mobiwagon-tilted-render.png";
 import signatureNameTitle from "@/assets/signature-name-title.png";
 
 export const Route = createFileRoute("/work/")({
@@ -66,7 +66,7 @@ const projects = [
     text: "An IoT pole built for the course Design of Mechatronic Systems that measures and shows UV levels, reminding festival-goers to put sunscreen on. Exhibited in the DTU tent at Roskilde Festival 2022.",
   },
   {
-    image: mobiwagonHero,
+    image: mobiwagonTiltedRender,
     title: "MOBIWAGON: Redesign of a Plasterboard Wagon",
     slug: "plasterboard-wagon-redesign",
     year: "2021",
