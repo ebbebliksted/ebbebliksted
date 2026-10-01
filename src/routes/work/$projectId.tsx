@@ -57,7 +57,7 @@ const projects: Record<string, {
     },
     learnings: [
       "Turning expert knowledge into something practitioners can use is its own design problem. Deciding what to cut from the playbook without loosing valuable context is difficult.",
-      "Creating a document that can easily be changed by colleagues without graphical design skills is more important when creating a working document for a 4 year project.",
+      "Creating a document that can easily be changed by colleagues without graphical design skills is more important than creating some graphically perfect when creating a working document for a 4 year project.",
       "A playbook only works if people actually pick it up. It should be scannable and the most important information should be front loaded",
     ],
     skills: ["Editorial & information design", "Content strategy", "Stakeholder collaboration", "Mission-oriented innovation", "Facilitation"],
@@ -136,12 +136,12 @@ const projects: Record<string, {
     image: mobiwagonTiltedRender,
     description: [
       "This project was a redesign of Flexmover's wagon for moving plasterboards on construction sites. The boards are 90cm wide, but most interior doors are only 82cm, so movers were stuck taking boards off the wagon and carrying them through doorways by hand. That's heavy, awkward work, often done by one person alone on site.",
-      "The vision was a wagon a single mover could load, drive through a standard door, tilt and unload without ever having to lift a board by hand. The final concept, MOBIWAGON, has a tiltable bed, a new wheel system with rollers for the final unload, mechanical arms with extension rods to steady the load, and a wireless remote control so the mover can steer the wagon through the doorway instead of pushing it. It measures 1668 x 749 x 572mm and is priced to sit well below the competition, around 104.000 kr against competitors closer to double that.",
+      "The vision was a wagon a single mover could load, drive through a standard door, tilt and unload without ever having to lift a board by hand. The final concept, MOBIWAGON, has a tiltable bed, a new wheel system with rollers for the final unload, mechanical arms with extension rods to steady the load, and a wireless remote control so the mover can steer the wagon through the doorway instead of pushing it.\u00a0",
     ],
     learnings: [
-      "The real constraint wasn't the wagon, it was the doorway. Designing around a fixed obstacle you can't change forces you to solve the problem somewhere else in the system.",
-      "A remote control still needs careful ergonomics. We added a dead-man's switch and shaped it so it's comfortable to hold and hard to activate by mistake.",
-      "Talking to the people who'd actually be pushing this thing around a construction site every day shaped the concept more than any spec sheet did.",
+      "Quick simple cardboard prototypes works almost everytime",
+      "Planning what needs to be done in CAD instead of just starting saves a lot of time.",
+      "Henry Ford is bad at Asking Questions",
     ],
     skills: ["Product design", "CAD & mechanism design", "User research", "Ergonomics", "Concept development"],
     galleryLayout: "feature",
