@@ -113,7 +113,7 @@ function AboutPage() {
         <div><ul>{skills.map((skill) => <li key={skill}>{skill}</li>)}</ul><p className="tools-label">Tools</p><p className="tools-list">{tools.join(" · ")}</p></div>
       </section>
 
-      <footer className="about-footer"><p>Selected works · 2026</p><Link to="/work">Explore the work</Link></footer>
+      <footer className="about-footer"><p>{"\n"}</p><Link to="/work">Explore some of my work</Link></footer>
     </main>
   );
 }
