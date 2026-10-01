@@ -138,7 +138,6 @@ function LandingPage() {
         ))}
       </div>
 
-      <p className="edition">Selected works · 2026</p>
       <p className="location">Copenhagen, DK</p>
 
       <Link to="/about" onClick={enterPortfolio} className="identity" aria-label="Enter Ebbe Bliksted's portfolio">
