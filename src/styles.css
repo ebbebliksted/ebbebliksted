@@ -211,7 +211,7 @@
 .identity p { margin: 1rem 0 0; font-size: clamp(.68rem, 1vw, .82rem); font-weight: 500; text-transform: uppercase; letter-spacing: .18em; color: var(--muted-foreground); transition: color .45s ease; }
 .edition, .location { position: absolute; margin: 0; font-size: 1rem; font-weight: 500; text-transform: uppercase; letter-spacing: .18em; color: var(--muted-foreground); }
 .edition { top: 2rem; left: 2rem; writing-mode: vertical-rl; transform: rotate(180deg); }
-.location { right: 2rem; bottom: 2rem; }
+.location { right: 2rem; bottom: 2rem; color: #ffd400; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
 .placeholder-page { display: flex; min-height: 100svh; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; text-align: center; }
