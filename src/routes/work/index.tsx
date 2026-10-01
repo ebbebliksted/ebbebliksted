@@ -88,7 +88,7 @@ function WorkPage() {
       </header>
 
       <section className="work-intro" aria-labelledby="work-heading">
-        <p className="about-kicker">Selected work · 2022-2026</p>
+        <p className="about-kicker">SELECTED WORK · 2021-2026</p>
         <h1 id="work-heading">Selected work</h1>
       </section>
 
