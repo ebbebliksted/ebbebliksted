@@ -25,6 +25,8 @@ const projects: Record<string, {
   image: string;
   description: string[];
   learnings: string[];
+  learningsHeading?: string;
+  learningsAsProse?: boolean;
   skills: string[];
   gallery?: { src: string; alt: string }[];
   galleryLayout?: "feature";
@@ -35,13 +37,15 @@ const projects: Record<string, {
     year: "2026",
     image: thesisCoverImage,
     description: [
-      "My thesis looks at how sustainable laser powder bed fusion (LPBF) actually is. It's a metal 3D printing process that's increasingly used to make injection moulding inserts with complex cooling channels inside them. Together with LEGO's manufacturing team, we combined a review of existing research with a full life cycle assessment of a real production insert, to find out where its environmental impact actually comes from.",
-      "Based on the LCA I came up with three improvement scenarios. We tested how feasible each one was through interviews with the manufacturing team, weighing the environmental gains against cost and what's realistic to actually change in a factory.",
+      "Metal additive manufacturing is an energy intensive process and the metal used often contains hazardous substances. However, metal 3d-printing is also a great tool for manufacturing shapes that otherwise wouldn’t be possible, which down the line could lead to more efficient production and perhaps also more sustainable production. This was the challenge, that led me to my thesis.",
+      "My thesis looks at how production companies can leverage the positives of using 3d printed inserts for injection molding while limiting the environmental impacts of producing the molds. Together with the metal additive manufacturing team at LEGO my team and I conducted a Life Cycle Assessment (LCA) of their process, which highlighted the significant environmental impacts. Based on these results we proposed and quantified 3 different improvements scenarios which led to the development of an automated process that could save up to 8% of material.",
+      "The scenarios were evaluated with members of different teams, weighing the environmental gains against cost and what’s realistic to change in a factory setting.",
     ],
+    learningsHeading: "What I learned",
+    learningsAsProse: true,
     learnings: [
-      "Mapping a complex production setup with multiple subcontractors, takes persistence and a lot of meetings and emails.",
-      "A Life Cycle Assessment only matters if the team that has to act on it can actually use the recommendations.",
-      "There is a lot of value in communicating pro's and cons in a transparent and straightforward manner.",
+      "Doing the project, I learned a lot about collecting data within a complex production setup. How much persistence and email it takes to get information from subcontractors.",
+      "I also learnt a lot about the context of which large production companies base their decisions, and how LCA results play a part in their decision-making process. I also learnt a lot about communicating LCA results to an audience without prior experience in this field.",
     ],
     skills: ["Life Cycle Assessment", "Sustainability strategy", "Design Research Methodology", "Stakeholder interviews", "Industrial collaboration"],
   },
@@ -224,11 +228,15 @@ function ProjectPage() {
       </section>
 
       <section className="about-section" aria-labelledby="project-learnings-heading">
-        <div className="about-section-label"><span>02</span><h2 id="project-learnings-heading">Learnings</h2></div>
+        <div className="about-section-label"><span>02</span><h2 id="project-learnings-heading">{project.learningsHeading ?? "Learnings"}</h2></div>
         <div className="project-body">
-          <ul className="project-learnings">
-            {project.learnings.map((learning) => <li key={learning.slice(0, 24)}>{learning}</li>)}
-          </ul>
+          {project.learningsAsProse ? (
+            project.learnings.map((learning) => <p key={learning.slice(0, 24)}>{learning}</p>)
+          ) : (
+            <ul className="project-learnings">
+              {project.learnings.map((learning) => <li key={learning.slice(0, 24)}>{learning}</li>)}
+            </ul>
+          )}
         </div>
       </section>
 
