@@ -62,10 +62,11 @@ const projects: Record<string, {
       href: "https://atv.dk/udgivelser-viden/mission-lab-playbook",
       label: "atv.dk/udgivelser-viden/mission-lab-playbook",
     },
+    learningsHeading: "What I learned",
+    learningsAsProse: true,
     learnings: [
-      "Turning expert knowledge into something practitioners can use is its own design problem. Deciding what to cut from the playbook without loosing valuable context is difficult.",
-      "Creating a document that can easily be changed by colleagues without graphical design skills is more important than creating some graphically perfect when creating a working document for a 4 year project.",
-      "A playbook only works if people actually pick it up. It should be scannable and the most important information should be front loaded",
+      "This project was done In a collaboration with a group of practitioners within different fields. Condensing all their knowledge without losing context and still doing their deep knowledge justice required some tough redactional decisions.",
+      "As a trained InDesign and Illustrator user it was tough creating the document within the constraints of Miro hurt a little in the beginning. But having a tool that is easily accessible to create changes in is great when it is a working document for a project where learnings and changes comes along often",
     ],
     skills: ["Editorial & information design", "Content strategy", "Stakeholder collaboration", "Mission-oriented innovation", "Facilitation"],
     gallery: [
