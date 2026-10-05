@@ -121,10 +121,12 @@ const projects: Record<string, {
       "During my internship on LEGO's element design team, I worked on Collectible Minifigures Series 25 and 26, mainly the prosthetic legs in Series 25 and Orion's club, element 5083, in Series 26. The club had to look like the club the greek god Orion is often depicted holding.  It should mould cleanly and meet the same durability and safety standards every LEGO element has to meet.",
       "I worked closely with creative leads, element leads and engineers, and took the piece all the way from early exploration sketches, through 3D sculpting in ZBrush and surface modelling in Rhino, to design for manufacturing.",
     ],
+    learningsHeading: "What I learned",
+    learningsAsProse: true,
     learnings: [
-      "When designing at a small scale all details matter. ",
-      "Moving between ZBrush's organic sculpting and Rhino's precise surfacing taught me how to keep a design's character intact while making it manufacturable.",
-      "Getting an element from concept to production is a collaborative effort. Creative intent only survives moulding, safety and cost constraints if you work closely with element leads and engineers along the way.",
+      "During this project I learned a lot about what is means to design for manufacturing, injection molding in particular, the tradeoffs between functionality, mouldability and looks.",
+      "I also learnt to navigate in the space between creative leads and production engineers. (Spoiler alert, they don’t always agree) However, final results were great and satisfied all requirements in the end.",
+      "The Club is sculpted in Zbrush, which was my first time 3d-modelling using sculpting.",
     ],
     skills: ["3D sculpting (ZBrush)", "CAD modelling (Rhino)", "Design for manufacturing (DFM)", "Element/toy design", "Cross-functional collaboration"],
     gallery: [
