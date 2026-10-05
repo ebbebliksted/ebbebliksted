@@ -78,13 +78,16 @@ const projects: Record<string, {
     year: "2024",
     image: designParkHero,
     description: [
-      "DesignPark looks at how primary schools without their own makerspace could still get hands-on access to digital fabrication. During the project my team and i moved between the engineering, system and product levels, combining desk research, 17 stakeholder interviews and co-creation workshops at two schools. The goal was to understand why donated 3D printers and laser cutters so often just sit unused. Turns out schools have the equipment, but not the maintenance knowledge, curriculum or time to actually use it.",
-      "The result is a 20-foot container fitted out as a mobile makerspace. Schools book a visit, a facilitator and a ready-made STEM curriculum through a website, while DesignPark keeps ownership of the machines and stays responsible for them. We tested the concept through a real co-creation workshop at a primary school, a website prototype, a business model canvas and a cost and market analysis. \n\n\n The project moved on as the start up Gnist Education",
+      "Many Danish public schools don’t have access to digital fabrication tools, and some of those who do have trouble maintaining their machines, leaving them sitting collecting dust.",
+      "The DesignPark project looks at how Danish public schools could get access without having to maintain the machines themselves. During the project my team and I moved between the engineering, system and product levels, combining desk research, 17 stakeholder interviews and co-creation workshops at two schools. The goal was to understand why donated 3D printers and laser cutters so often just sit unused. Turns out schools have the equipment, but not the maintenance knowledge, curriculum or time to actually use it.",
+      "These problems is avoided by supplying everything in a container.  Schools book a visit, a facilitator and a ready-made STEM curriculum through a website, while DesignPark keeps ownership of the machines and stays responsible for them. We tested the concept through a real co-creation workshop at a primary school, a website prototype, a business model canvas and a cost and market analysis with multiple foundations interested in donating funds to the project.",
+      "The project moved on as the start up Gnist Education",
     ],
+    learningsHeading: "What I learned",
+    learningsAsProse: true,
     learnings: [
-      "The real barrier between schools and digital fabrication was organisational, things like maintenance, curriculum and teacher confidence, not physical space or budget.",
-      "Co-design with Teachers and students was exceptionally valuable",
-      "With eight team members and even more external stakeholders, structured project management mattered.",
+      "Besides sharpening my 3d modelling skills, I learned a lot about project and stakeholder management. Collaborating with teachers, students, school and other organizations helped us sharpen the project and the value we could offer.",
+      "The project was done as a part of a systems engineering course, and the many different aspects of this project taught me the importance of keeping everybody aligned and getting the individual pieces to work together",
     ],
     skills: ["Systems-level design (N-model)", "Stakeholder research & interviews", "Co-creation workshops", "Product-service system design", "CAD & prototyping", "Business modelling"],
     gallery: [
