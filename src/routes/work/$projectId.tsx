@@ -6,6 +6,8 @@ import designParkWorkshop from "@/assets/design-park-workshop.png";
 import designParkPlatform from "@/assets/design-park-platform.png";
 import designParkClassroom from "@/assets/design-park-classroom.png";
 import legoClubHero from "@/assets/lego-club-5083.jpg";
+import legoMinifigures from "@/assets/lego-minifigures-series-26.jpg";
+import legoMinifiguresBox from "@/assets/lego-minifigures-series-26-box.png";
 import missionLabCover from "@/assets/mission-lab-playbook-cover.png";
 import missionLabFigure from "@/assets/mission-lab-figure.png";
 import bigSunHero from "@/assets/big-sun-uv-tower.webp";
@@ -125,6 +127,10 @@ const projects: Record<string, {
       "Getting an element from concept to production is a collaborative effort. Creative intent only survives moulding, safety and cost constraints if you work closely with element leads and engineers along the way.",
     ],
     skills: ["3D sculpting (ZBrush)", "CAD modelling (Rhino)", "Design for manufacturing (DFM)", "Element/toy design", "Cross-functional collaboration"],
+    gallery: [
+      { src: legoMinifigures, alt: "Four Collectible Minifigures from Series 26, including Orion with the club" },
+      { src: legoMinifiguresBox, alt: "The Collectible Minifigures Series 26 packaging" },
+    ],
   },
   "big-sun-project": {
     title: "Big Sun Project",
