@@ -26,7 +26,7 @@ const experience = [
     role: "Student Assistant",
     place: "ATV, Danish Academy of Technical Sciences",
     logo: atvLogo,
-    text: "During my time at ATV i developed and facilitated Mission Labs, which is cross disciplinary Mission oriented innovation programmes. I got the chance to work with 250+ participants from Universities, private companies and public authorities. The Mission Labs ended up as reports and decision support presented to decision makers in companies, in public authorities at both the national and regional level.",
+    text: "During my time at ATV i developed and facilitated Mission Labs, which is cross disciplinary Mission oriented innovation programmes. I got the chance to work with 250+ participants from Universities, private companies and public authorities. The Mission Labs ended up as reports and decision support presented to decision makers in companies and in public authorities at both the national and regional level.",
   },
   {
     years: "2023",
