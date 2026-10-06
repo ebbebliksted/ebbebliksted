@@ -14,6 +14,7 @@ import orion from "@/assets/Orion.jpg.asset.json";
 import packing from "@/assets/PACKING.png.asset.json";
 import picture from "@/assets/Picture3.jpg.asset.json";
 import thesisCover from "@/assets/thesis-cover.jpg";
+import sprinterMinifigure from "@/assets/lego-minifigure-series-25-sprinter.png";
 import { projectImages } from "@/data/projects";
 
 export const Route = createFileRoute("/")({
@@ -45,6 +46,7 @@ const trailImages = Array.from(
     packing.url,
     picture.url,
     thesisCover,
+    sprinterMinifigure,
     ...projectImages,
   ]),
 );
