@@ -67,7 +67,7 @@ const projects = [
   },
   {
     image: mobiwagonTiltedRender,
-    title: "MOBIWAGON: Redesign of a Plasterboard Wagon",
+    title: "Redesign of plasterboard wagon",
     slug: "plasterboard-wagon-redesign",
     year: "2021",
     text: "A redesign of Flexmover's plasterboard wagon, built to actually fit through a standard door. A tiltable bed, a new wheel system and an ergonomic remote let one person move and unload heavy boards on their own.",

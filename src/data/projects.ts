@@ -164,17 +164,18 @@ export const projects: Record<string, {
     ],
   },
   "plasterboard-wagon-redesign": {
-    title: "MOBIWAGON: Redesign of a Plasterboard Wagon",
+    title: "Redesign of plasterboard wagon",
     year: "2021",
     image: mobiwagonTiltedRender,
     description: [
       "This project was a redesign of Flexmover's wagon for moving plasterboards on construction sites. The boards are 90cm wide, but most interior doors are only 82cm, so movers were stuck taking boards off the wagon and carrying them through doorways by hand. That's heavy, awkward work, often done by one person alone on site.",
       "The vision was a wagon a single mover could load, drive through a standard door, tilt and unload without ever having to lift a board by hand. The final concept, MOBIWAGON, has a tiltable bed, a new wheel system with rollers for the final unload, mechanical arms with extension rods to steady the load, and a wireless remote control so the mover can steer the wagon through the doorway instead of pushing it.\u00a0",
     ],
+    learningsHeading: "What I learned",
+    learningsAsProse: true,
     learnings: [
-      "Quick simple cardboard prototypes works almost everytime",
-      "Planning what needs to be done in CAD instead of just starting saves a lot of time.",
-      "Henry Ford is bad at Asking Questions",
+      "This was one of my first design projects where we talked to actual users, and it really taught me the value in doing so. Going into the project we knew nothing about plasterboard wagons, but through interviews with carpenters and other craftsmen we quickly learnt how it was used and how it worked.",
+      "We also created a lot of CAD models of our proposed design, and here we quickly learnt the importance of planning and structuring your CAD work before just jumping into it. Sketching and small cardboard prototypes saves a lot of time.",
     ],
     skills: ["Product design", "CAD & mechanism design", "User research", "Ergonomics", "Concept development"],
     galleryLayout: "feature",
