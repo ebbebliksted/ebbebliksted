@@ -151,10 +151,10 @@ export const projects: Record<string, {
       "Big Sun was a project for the course Design of Mechatronic Systems. The task was to design an IoT product that could help people adjust to life after the pandemic, and we decided to focus on reminding people to use sunscreen now that festivals were finally back.",
       "The result is a pole that measures and shows the UV level on the spot. People can also sign up to get a notification for when they should apply sunscreen, and we built an app that lets you check the UV index the pole is measuring from anywhere. The pole itself is a mix of 3D-printed, laser-cut and traditonally built parts, sensors and motors. It was exhibited in the DTU tent at Roskilde Festival 2022.",
     ],
+    learningsHeading: "What I learned",
+    learningsAsProse: true,
     learnings: [
-      "Plan for unstable internet!.",
-      "Designing for a festival crowd.  The pole had to survive being poked, pointed at and rained on all week.",
-      "Make it more interactive. A large pole that displays the UV index is more fun if the UV changes during the hours it is on display.",
+      "This project taught me a lot about building electric circuits, programming microcontrollers and setting up simple IoT systems. Building for Roskilde Festival meant building quick a dirty and setting it up for easy repairs and lot touching by people of different levels of intoxication.",
     ],
     skills: ["IoT prototyping", "3D printing & laser cutting", "Sensor & motor integration", "App design", "Mechatronic systems"],
     gallery: [
