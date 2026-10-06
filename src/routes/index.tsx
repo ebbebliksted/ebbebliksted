@@ -1,5 +1,5 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { useEffect, useRef, useState, type CSSProperties, type MouseEvent } from "react";
+import { useEffect, useRef, useState, type MouseEvent } from "react";
 
 import bigSun from "@/assets/BigSun.png.asset.json";
 import books from "@/assets/Bogreolen.png.asset.json";
@@ -29,80 +29,104 @@ export const Route = createFileRoute("/")({
   component: LandingPage,
 });
 
-const fragments = [
-  { src: bigSun.url, alt: "Interactive strength test at an outdoor event", className: "fragment fragment-sun", depth: 1, exit: "-75vw, -65vh" },
-  { src: books.url, alt: "Book recommendation interface", className: "fragment fragment-books", depth: -0.7, exit: "-80vw, 70vh" },
-  { src: designPark.url, alt: "Modular product display in an open container", className: "fragment fragment-park", depth: 0.8, exit: "75vw, -70vh" },
-  { src: explodedAssembly, alt: "Exploded technical drawing of a motorized mechanism", className: "fragment fragment-exploded", depth: 0.75, exit: "60vw, -75vh" },
-  { src: fitphone.url, alt: "Technical drawing of a handheld product", className: "fragment fragment-fitphone", depth: -1.15, exit: "-75vw, 5vh" },
-  { src: flexmover.url, alt: "Flexmover industrial transport concept", className: "fragment fragment-flex", depth: 0.65, exit: "80vw, 70vh" },
-  { src: foamMockup, alt: "Foam mockup of a handheld product", className: "fragment fragment-foam", depth: -0.5, exit: "-85vw, 15vh" },
-  { src: playbook.url, alt: "Mission Lab playbook cover", className: "fragment fragment-playbook", depth: -0.85, exit: "5vw, -85vh" },
-  { src: openBox.url, alt: "Electronics prototype in an open enclosure", className: "fragment fragment-box", depth: 1.1, exit: "-10vw, 90vh" },
-  { src: orion.url, alt: "Orion character model", className: "fragment fragment-orion", depth: -1, exit: "85vw, -5vh" },
-  { src: packing.url, alt: "Packaging simulation result", className: "fragment fragment-packing", depth: 0.9, exit: "75vw, 55vh" },
-  { src: picture.url, alt: "Mobile interface prototype tested outdoors", className: "fragment fragment-phone", depth: -0.6, exit: "-55vw, 80vh" },
-  { src: thesisCover, alt: "Master's thesis cover page", className: "fragment fragment-thesis", depth: -0.95, exit: "10vw, 85vh" },
+const trailImages = [
+  bigSun.url,
+  books.url,
+  designPark.url,
+  explodedAssembly,
+  fitphone.url,
+  flexmover.url,
+  foamMockup,
+  playbook.url,
+  openBox.url,
+  orion.url,
+  packing.url,
+  picture.url,
+  thesisCover,
 ];
+
+const TRAIL_SPACING = 78;
+const TRAIL_MAX_ITEMS = 40;
+const TRAIL_MAX_STEPS = 8;
 
 function LandingPage() {
   const stageRef = useRef<HTMLElement>(null);
+  const trailRef = useRef<HTMLDivElement>(null);
   const [isExiting, setIsExiting] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
     const stage = stageRef.current;
-    if (!stage || window.matchMedia("(prefers-reduced-motion: reduce)").matches || !window.matchMedia("(pointer: fine)").matches) return;
+    const layer = trailRef.current;
+    if (!stage || !layer) return;
 
-    const items = Array.from(stage.querySelectorAll<HTMLElement>(".fragment")).map((el) => ({ el, zoom: 0 }));
-    const target = { x: 0, y: 0 };
-    const current = { x: 0, y: 0 };
-    let pointerX = -Infinity;
-    let pointerY = -Infinity;
-    let frame = 0;
+    trailImages.forEach((src) => {
+      const preload = new Image();
+      preload.src = src;
+    });
 
-    const animate = () => {
-      current.x += (target.x - current.x) * 0.09;
-      current.y += (target.y - current.y) * 0.09;
+    let nextImage = Math.floor(Math.random() * trailImages.length);
+    let last: { x: number; y: number } | null = null;
 
-      items.forEach((item) => {
-        const depth = Number(item.el.dataset["depth"] ?? 1);
-        item.el.style.setProperty("--mouse-x", `${current.x * depth * 34}px`);
-        item.el.style.setProperty("--mouse-y", `${current.y * depth * 25}px`);
+    const spawn = (x: number, y: number) => {
+      const figure = document.createElement("figure");
+      figure.className = "trail-image";
+      figure.style.left = `${x}px`;
+      figure.style.top = `${y}px`;
+      figure.style.setProperty("--tilt", `${(Math.random() * 12 - 6).toFixed(1)}deg`);
+      figure.style.setProperty("--s", (0.85 + Math.random() * 0.3).toFixed(2));
 
-        // Proximity zoom: the closer the cursor, the bigger the image.
-        const rect = item.el.getBoundingClientRect();
-        const dist = Math.hypot(pointerX - (rect.left + rect.width / 2), pointerY - (rect.top + rect.height / 2));
-        const reach = Math.max(rect.width, rect.height) * 1.6;
-        const targetZoom = pointerX === -Infinity ? 0 : Math.max(0, Math.min(1, 1 - dist / reach));
-        item.zoom += (targetZoom - item.zoom) * 0.12;
-        item.el.style.setProperty("--zoom", `${1 + item.zoom * 0.22}`);
-      });
+      const img = document.createElement("img");
+      img.src = trailImages[nextImage] as string;
+      img.alt = "";
+      img.draggable = false;
+      figure.appendChild(img);
+      nextImage = (nextImage + 1) % trailImages.length;
 
-      frame = window.requestAnimationFrame(animate);
+      figure.addEventListener("animationend", () => figure.remove(), { once: true });
+      layer.appendChild(figure);
+      while (layer.childElementCount > TRAIL_MAX_ITEMS) layer.firstElementChild?.remove();
     };
 
     const handlePointerMove = (event: PointerEvent) => {
-      pointerX = event.clientX;
-      pointerY = event.clientY;
-      target.x = event.clientX / window.innerWidth - 0.5;
-      target.y = event.clientY / window.innerHeight - 0.5;
+      const rect = stage.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+
+      if (!last) {
+        last = { x, y };
+        spawn(x, y);
+        return;
+      }
+
+      const dx = x - last.x;
+      const dy = y - last.y;
+      const distance = Math.hypot(dx, dy);
+      if (distance < TRAIL_SPACING) return;
+
+      if (distance > TRAIL_SPACING * TRAIL_MAX_STEPS) {
+        last = { x, y };
+        spawn(x, y);
+        return;
+      }
+
+      const steps = Math.floor(distance / TRAIL_SPACING);
+      for (let step = 1; step <= steps; step += 1) {
+        spawn(last.x + (dx / distance) * TRAIL_SPACING * step, last.y + (dy / distance) * TRAIL_SPACING * step);
+      }
+      last = { x: last.x + (dx / distance) * TRAIL_SPACING * steps, y: last.y + (dy / distance) * TRAIL_SPACING * steps };
     };
     const handlePointerLeave = () => {
-      pointerX = -Infinity;
-      pointerY = -Infinity;
-      target.x = 0;
-      target.y = 0;
+      last = null;
     };
 
     stage.addEventListener("pointermove", handlePointerMove);
     stage.addEventListener("pointerleave", handlePointerLeave);
-    frame = window.requestAnimationFrame(animate);
 
     return () => {
       stage.removeEventListener("pointermove", handlePointerMove);
       stage.removeEventListener("pointerleave", handlePointerLeave);
-      window.cancelAnimationFrame(frame);
+      layer.replaceChildren();
     };
   }, []);
 
@@ -121,22 +145,7 @@ function LandingPage() {
 
   return (
     <main ref={stageRef} className={`landing-stage${isExiting ? " is-exiting" : ""}`}>
-      <div className="collage" aria-hidden="true">
-        {fragments.map((fragment, index) => (
-          <figure
-            className={fragment.className}
-            data-depth={fragment.depth}
-            key={fragment.src}
-            style={{
-              "--delay": `${index * 0.1}s`,
-              "--exit-x": fragment.exit.split(", ")[0],
-              "--exit-y": fragment.exit.split(", ")[1],
-            } as CSSProperties}
-          >
-            <img src={fragment.src} alt="" draggable={false} />
-          </figure>
-        ))}
-      </div>
+      <div ref={trailRef} className="trail" aria-hidden="true" />
 
       <p className="location">Copenhagen, DK</p>
 
