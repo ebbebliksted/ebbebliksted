@@ -46,7 +46,7 @@ const projects = [
   },
   {
     image: urbanBloomImage.url,
-    title: "Urban Bloom",
+    title: "Bachelor thesis: Urban Bloom",
     slug: "urban-bloom",
     year: "2023",
     text: "My bachelor thesis on how design can turn neglected urban plots into biodiversity. Urban Bloom is a mobile platform where citizens can claim and garden disused public spaces helping the municipality and giving citizens of Copenhagen Access to gardening",
