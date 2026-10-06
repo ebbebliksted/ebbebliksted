@@ -176,7 +176,7 @@
 .landing-stage.is-exiting .location { opacity: 0; }
 
 .trail { position: absolute; inset: 0; z-index: 1; overflow: hidden; pointer-events: none; }
-.trail-image { position: absolute; margin: 0; width: calc(clamp(6.5rem, 11vw, 12rem) * var(--s, 1)); translate: -50% -50%; rotate: var(--tilt, 0deg); will-change: opacity, scale; animation: trail-fade 3.4s linear forwards; }
+.trail-image { position: absolute; margin: 0; width: calc(clamp(6.5rem, 11vw, 12rem) * var(--s, 1)); translate: -50% -50%; rotate: var(--tilt, 0deg); will-change: opacity, scale; animation: trail-fade 1.8s linear forwards; }
 .trail-image img { display: block; width: 100%; height: auto; box-shadow: 0 14px 40px oklch(0.18 0.01 70 / 0.12); }
 
 .identity { position: absolute; inset: 0; z-index: 2; display: block; text-decoration: none; color: var(--foreground); transition: transform .9s cubic-bezier(.76,0,.24,1); }
