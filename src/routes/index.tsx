@@ -60,9 +60,15 @@ function shuffled<T>(items: T[]): T[] {
   return copy;
 }
 
-const TRAIL_SPACING = 78;
+const TRAIL_GAP_FACTOR = 1.7;
 const TRAIL_MAX_ITEMS = 40;
 const TRAIL_MAX_STEPS = 8;
+
+function getTrailSpacing() {
+  const width = window.innerWidth;
+  const imageWidth = width <= 700 ? width * 0.26 : Math.min(Math.max(width * 0.11, 104), 192);
+  return imageWidth * TRAIL_GAP_FACTOR;
+}
 
 function LandingPage() {
   const stageRef = useRef<HTMLElement>(null);
@@ -120,19 +126,20 @@ function LandingPage() {
       const dx = x - last.x;
       const dy = y - last.y;
       const distance = Math.hypot(dx, dy);
-      if (distance < TRAIL_SPACING) return;
+      const spacing = getTrailSpacing();
+      if (distance < spacing) return;
 
-      if (distance > TRAIL_SPACING * TRAIL_MAX_STEPS) {
+      if (distance > spacing * TRAIL_MAX_STEPS) {
         last = { x, y };
         spawn(x, y);
         return;
       }
 
-      const steps = Math.floor(distance / TRAIL_SPACING);
+      const steps = Math.floor(distance / spacing);
       for (let step = 1; step <= steps; step += 1) {
-        spawn(last.x + (dx / distance) * TRAIL_SPACING * step, last.y + (dy / distance) * TRAIL_SPACING * step);
+        spawn(last.x + (dx / distance) * spacing * step, last.y + (dy / distance) * spacing * step);
       }
-      last = { x: last.x + (dx / distance) * TRAIL_SPACING * steps, y: last.y + (dy / distance) * TRAIL_SPACING * steps };
+      last = { x: last.x + (dx / distance) * spacing * steps, y: last.y + (dy / distance) * spacing * steps };
     };
     const handlePointerLeave = () => {
       last = null;
