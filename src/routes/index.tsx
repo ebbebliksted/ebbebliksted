@@ -60,7 +60,7 @@ function shuffled<T>(items: T[]): T[] {
   return copy;
 }
 
-const TRAIL_GAP_FACTOR = 1.7;
+const TRAIL_GAP_FACTOR = 1.35;
 const TRAIL_MAX_ITEMS = 40;
 const TRAIL_MAX_STEPS = 8;
 
