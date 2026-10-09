@@ -15,7 +15,7 @@ import packing from "@/assets/PACKING.png.asset.json";
 import picture from "@/assets/Picture3.jpg.asset.json";
 import thesisCover from "@/assets/thesis-cover.jpg";
 import sprinterMinifigure from "@/assets/lego-minifigure-series-25-sprinter.png";
-import { projectImages } from "@/data/projects";
+import { projectImages, projects } from "@/data/projects";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -60,6 +60,19 @@ function shuffled<T>(items: T[]): T[] {
   return copy;
 }
 
+const imagesOfProject = (id: string) => {
+  const project = projects[id];
+  return project ? [project.image, ...(project.gallery?.map((item) => item.src) ?? [])] : [];
+};
+
+const FEATURED_SCALE = 1.5;
+const featuredImages = new Set<string>([
+  bigSun.url,
+  designPark.url,
+  ...imagesOfProject("design-park"),
+  ...imagesOfProject("big-sun-project"),
+]);
+
 const TRAIL_GAP_FACTOR = 1.35;
 const TRAIL_MAX_ITEMS = 40;
 const TRAIL_MAX_STEPS = 8;
@@ -98,10 +111,12 @@ function LandingPage() {
       figure.style.left = `${x}px`;
       figure.style.top = `${y}px`;
       figure.style.setProperty("--tilt", `${(Math.random() * 12 - 6).toFixed(1)}deg`);
-      figure.style.setProperty("--s", (0.85 + Math.random() * 0.3).toFixed(2));
+      const src = ready[nextImage % ready.length] as string;
+      const boost = featuredImages.has(src) ? FEATURED_SCALE : 1;
+      figure.style.setProperty("--s", ((0.85 + Math.random() * 0.3) * boost).toFixed(2));
 
       const img = document.createElement("img");
-      img.src = ready[nextImage % ready.length] as string;
+      img.src = src;
       img.alt = "";
       img.draggable = false;
       figure.appendChild(img);
