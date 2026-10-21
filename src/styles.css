@@ -192,7 +192,7 @@
   height: calc(530 * var(--bg-s));
   -webkit-mask-image: linear-gradient(56.07deg, #000 calc(var(--p) - 3%), transparent var(--p));
   mask-image: linear-gradient(56.07deg, #000 calc(var(--p) - 3%), transparent var(--p));
-  animation: write-on 3.1s linear 1s both;
+  animation: write-on 1.7s linear .7s both;
 }
 .write-on img { display: block; width: 100%; height: 100%; }
 .landing-stage.is-exiting .write-on { opacity: 0; transition: opacity .4s ease; }
