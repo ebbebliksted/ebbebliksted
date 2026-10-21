@@ -96,13 +96,27 @@ function LandingPage() {
     if (!stage || !layer) return;
 
     const ready: string[] = [];
-    shuffled(trailImages).forEach((src) => {
+    let bag: string[] = [];
+    let lastSrc = "";
+    trailImages.forEach((src) => {
       const preload = new Image();
-      preload.onload = () => ready.push(src);
+      preload.onload = () => {
+        ready.push(src);
+        bag.splice(Math.floor(Math.random() * (bag.length + 1)), 0, src);
+      };
       preload.src = src;
     });
 
-    let nextImage = 0;
+    const pickImage = () => {
+      if (bag.length === 0) bag = shuffled(ready);
+      if (bag.length > 1 && bag[bag.length - 1] === lastSrc) {
+        const swap = Math.floor(Math.random() * (bag.length - 1));
+        [bag[swap], bag[bag.length - 1]] = [bag[bag.length - 1] as string, bag[swap] as string];
+      }
+      lastSrc = bag.pop() as string;
+      return lastSrc;
+    };
+
     let last: { x: number; y: number } | null = null;
 
     const spawn = (x: number, y: number) => {
@@ -112,7 +126,7 @@ function LandingPage() {
       figure.style.left = `${x}px`;
       figure.style.top = `${y}px`;
       figure.style.setProperty("--tilt", `${(Math.random() * 12 - 6).toFixed(1)}deg`);
-      const src = ready[nextImage % ready.length] as string;
+      const src = pickImage();
       const boost = featuredImages.has(src) ? FEATURED_SCALE : 1;
       figure.style.setProperty("--s", ((0.85 + Math.random() * 0.3) * boost).toFixed(2));
 
@@ -121,7 +135,6 @@ function LandingPage() {
       img.alt = "";
       img.draggable = false;
       figure.appendChild(img);
-      nextImage += 1;
 
       figure.addEventListener("animationend", () => figure.remove(), { once: true });
       layer.appendChild(figure);
