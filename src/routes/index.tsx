@@ -15,6 +15,7 @@ import packing from "@/assets/PACKING.png.asset.json";
 import picture from "@/assets/Picture3.jpg.asset.json";
 import thesisCover from "@/assets/thesis-cover.jpg";
 import sprinterMinifigure from "@/assets/lego-minifigure-series-25-sprinter.png";
+import clickToEnter from "@/assets/landing-click-to-enter.png";
 import { projectImages, projects } from "@/data/projects";
 
 export const Route = createFileRoute("/")({
@@ -185,6 +186,9 @@ function LandingPage() {
 
   return (
     <main ref={stageRef} className={`landing-stage${isExiting ? " is-exiting" : ""}`}>
+      <div className="write-on" aria-hidden="true">
+        <img src={clickToEnter} alt="" draggable={false} />
+      </div>
       <div ref={trailRef} className="trail" aria-hidden="true" />
 
       <p className="location">Copenhagen, DK</p>

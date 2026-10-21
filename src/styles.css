@@ -167,8 +167,35 @@
   overflow: hidden;
   isolation: isolate;
   touch-action: none;
+  --bg-s: max(calc(100vw / 2493), calc(100svh / 1811));
   background: var(--background) url("./assets/landing-background.jpg") center / cover no-repeat;
 }
+
+@property --p { syntax: "<percentage>"; inherits: false; initial-value: 0%; }
+
+@keyframes write-on {
+  0% { --p: 3%; animation-timing-function: cubic-bezier(.4, 0, .6, 1); }
+  35% { --p: 35.3%; animation-timing-function: ease-in-out; }
+  40.9% { --p: 41.6%; animation-timing-function: cubic-bezier(.4, 0, .6, 1); }
+  51.3% { --p: 53.2%; animation-timing-function: ease-in-out; }
+  57.2% { --p: 59%; animation-timing-function: cubic-bezier(.4, 0, .6, 1); }
+  100% { --p: 98%; }
+}
+
+.write-on {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  left: calc((100vw - 2493 * var(--bg-s)) / 2 + 1599 * var(--bg-s));
+  top: calc((100svh - 1811 * var(--bg-s)) / 2 + 950 * var(--bg-s));
+  width: calc(700 * var(--bg-s));
+  height: calc(530 * var(--bg-s));
+  -webkit-mask-image: linear-gradient(56.07deg, #000 calc(var(--p) - 3%), transparent var(--p));
+  mask-image: linear-gradient(56.07deg, #000 calc(var(--p) - 3%), transparent var(--p));
+  animation: write-on 3.1s linear 1s both;
+}
+.write-on img { display: block; width: 100%; height: 100%; }
+.landing-stage.is-exiting .write-on { opacity: 0; transition: opacity .4s ease; }
 
 .landing-stage::after { content: ""; position: absolute; inset: 0; z-index: 5; pointer-events: none; background: var(--background); opacity: 0; transition: opacity .35s ease .68s; }
 .landing-stage.is-exiting::after { opacity: 1; }
@@ -313,6 +340,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .trail-image { animation-name: trail-fade-static; rotate: none; }
+  .write-on { animation: none; --p: 100%; }
   .identity h1, .identity p { transition: none; }
 }
 
